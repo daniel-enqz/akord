@@ -4,7 +4,7 @@
 > *PLACE SOME PROJECT IMAGES HERE (HOME PAGE OR OTHER RELEVANT PAGES)*
 
 ## Main APP Features
-- A user can....
+- A user can a create an event, and edit the same event.
 
 ## Things you may want to cover to initialize this project:
 ### Versions
