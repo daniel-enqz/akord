@@ -4,5 +4,10 @@
   <hr>
   <h5><%= @event.description  %><h5>
   <p><strong>Event Creator:</strong> <%= @event.user.attendee.name.capitalize %> </p>
-  <p><%= @event.votable_dates_strings %><p>
+  <p><%= @event %><p>
+  <% @event.votable_dates.each do |event_date| %>
+    <p>
+      <%= event_date.short_string %>
+    </p>
+  <% end %>
 </div>

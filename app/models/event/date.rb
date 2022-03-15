@@ -7,7 +7,7 @@ class Event::Date
   end
 
   # Example of things the view might need
-  # def short_month
-  #   value.strftime("%b")
-  # end
+  def short_string
+    value.strftime("%b %d")
+  end
 end
