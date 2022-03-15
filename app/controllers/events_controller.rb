@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
-<<<<<<< HEAD
 
   def show
-=======
+  end
+
   def new
     @event = Event.new
   end
@@ -26,6 +26,5 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:title, :description, :votable_dates_strings)
->>>>>>> master
   end
 end
