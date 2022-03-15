@@ -4,14 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :attendee
+  belongs_to :attendee, optional: true
 
-  before_validation :generate_attendee
+  after_create :create_attendee
 
   private
 
-  def generate_attendee
+  def create_attendee
     attendee_name = email.gsub(/^(.*?)@.*/, '\1')
-    self.attendee = Attendee.new(name: attendee_name)
+    create_attendee!(name: attendee_name)
   end
 end
