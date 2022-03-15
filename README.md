@@ -14,7 +14,9 @@
 > Active Record (Example: `rails g model`) <br>
 > Heroku Deployment `heroku/7.59.2 linux-x64 node-v12.21.0 `<br>
 > `pgcrypto` (in order to add `:uuid`[Universally unique identifier]  to an attendee, so that a user logged in can also vote)
-![image](https://user-images.githubusercontent.com/72522628/158295411-9dd5ff4a-e40c-4d15-a0b9-0ec257d5ea6f.png)
+
+<img src="https://user-images.githubusercontent.com/72522628/158295411-9dd5ff4a-e40c-4d15-a0b9-0ec257d5ea6f.png">
+ 
 
 ## Setup
 
