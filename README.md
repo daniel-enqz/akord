@@ -12,7 +12,9 @@
 > <img src="https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white"> <strong> 6.1.4.6 </strong>
 ### Tools Used
 > Active Record (Example: `rails g model`) <br>
-> Heroku Deployment `heroku/7.59.2 linux-x64 node-v12.21.0 `<br> ....
+> Heroku Deployment `heroku/7.59.2 linux-x64 node-v12.21.0 `<br>
+> `pgcrypto` (in order to add `:uuid`[Universally unique identifier]  to an attendee, so that a user logged in can also vote)
+![image](https://user-images.githubusercontent.com/72522628/158295411-9dd5ff4a-e40c-4d15-a0b9-0ec257d5ea6f.png)
 
 ## Setup
 
