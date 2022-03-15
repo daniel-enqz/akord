@@ -1,4 +1,10 @@
 class EventsController < ApplicationController
+
+  def show
+  end
+  def join
+  end
+
   def new
     @event = Event.new
   end
