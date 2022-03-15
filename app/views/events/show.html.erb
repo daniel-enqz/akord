@@ -1,7 +1,8 @@
 <div class="container">
   <br>
-  <h1>Beer´s day</h1>
-  <p>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  </p>
+  <h1><%= @event.title %></h1>
+  <hr>
+  <h5><%= @event.description  %><h5>
+  <p><strong>Event Creator:</strong> <%= @event.user.attendee.name.capitalize %> </p>
+  <p><%= @event.votable_dates_strings %><p>
 </div>
