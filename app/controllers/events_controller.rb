@@ -1,7 +1,10 @@
 class EventsController < ApplicationController
+  # skip_before_action :authenticate_user!, only: %i[  ]
+  before_action :set_event, only: %i[show]
 
   def show
   end
+
   def join
   end
 
@@ -11,8 +14,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.owner = current_user
-    authorize @event
+    @event.user = current_user
     if @event.save
       redirect_to event_path(@event), notice: 'event was successfully created.'
     else
@@ -23,7 +25,7 @@ class EventsController < ApplicationController
   private
 
   def set_event
-    @event = event.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
   def event_params

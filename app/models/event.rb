@@ -6,8 +6,8 @@ class Event < ApplicationRecord
   end
 
   # Might help with flatpick values if they are JSON
-  # def votable_dates_strings=(value)
-  #   value = JSON.parse(value) if value.is_a? String
-  #   super(value)
-  # end
+  def votable_dates_strings=(value)
+    value = value.split(", ") if value.is_a? String
+    super(value)
+  end
 end
