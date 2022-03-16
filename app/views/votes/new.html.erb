@@ -1,0 +1,18 @@
+<div class="container-sm">
+  <div class="d-flex flex-column m-5">
+    <h1 class="fw-bold border-bottom">WHAT'S YOUR PREFERRED DAY FOR <%= @event.title %></h1>
+    <h5><%= @event.description %></h5>
+      <%= simple_form_for [@event, @vote] do |f| %>
+      <% @event.event_dates.each do |date|%>
+        <div class="form-inputs">
+          <%= date.value %>
+
+          <%= f.input event[:rate] %>
+        </div>
+      <% end %>
+      <div class="form-actions">
+        <%= f.button :submit, class:"btn btn-outline-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

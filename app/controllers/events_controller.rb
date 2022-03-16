@@ -5,7 +5,10 @@ class EventsController < ApplicationController
   def show
   end
 
+  # GET  /events/:id/join
   def join
+    @event = Event.find(params[:id])
+    @attendee = Attendee.new
   end
 
   def new

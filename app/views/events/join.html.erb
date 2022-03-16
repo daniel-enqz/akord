@@ -3,4 +3,7 @@
   <h1>
     PIN
   </h1>
+    <%= simple_form_for [@event, @attendee] do |f| %>
+    <%= f.input :name %>
+  <% end %>
 </div>
