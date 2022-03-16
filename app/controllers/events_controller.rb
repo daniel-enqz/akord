@@ -2,6 +2,10 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[show join]
   before_action :set_event, only: %i[show]
 
+  def index
+    @events = current_user.events
+  end
+
   def show
   end
 
