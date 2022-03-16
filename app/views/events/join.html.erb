@@ -3,10 +3,7 @@
   <h1>
     PIN
   </h1>
-  <h2>User name</h2>
-  <%= simple_form @user do |f| %>
-    <%= f.input :username %>
-    <%= f.input :password %>
-    <%= f.button :submit %>
+    <%= simple_form_for [@event, @attendee] do |f| %>
+    <%= f.input :name %>
   <% end %>
 </div>
