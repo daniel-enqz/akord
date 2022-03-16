@@ -24,11 +24,6 @@ class DateVotesController < ApplicationController
 
   private
 
-  def current_attendee
-    session[:attendee_id] = "fa1d484c-f0a2-4035-8afe-8c6601ddd45a" # remove after attendee cookie assignment is ready
-    session[:attendee_id].present? ? Attendee.find(session[:attendee_id]) : nil
-  end
-
   def set_event
     @event = Event.find(params[:id])
   end
