@@ -4,10 +4,15 @@
   <hr>
   <h5><%= @event.description  %><h5>
   <p><strong>Event Creator:</strong> <%= @event.user.attendee.name.capitalize %> </p>
-  <p><%= @event %><p>
-  <% @event.votable_dates.each do |event_date| %>
+  <%= raise %>
+  <% @event.event_dates.each do |event_date| %>
     <p>
       <%= event_date.short_string %>
+      |
+      <%= event_date.rate %>
+      | yesses <%= event_date.yes_count %>
+      | nosses <%= event_date.no_count %>
+      | maybesessss <%= event_date.maybe_count %>
     </p>
   <% end %>
 </div>
