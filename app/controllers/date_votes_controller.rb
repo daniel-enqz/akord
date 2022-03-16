@@ -6,7 +6,7 @@ class DateVotesController < ApplicationController
     attendee = current_attendee
     @date_votes = Event::DateVotes.new(attendee: attendee, event: event)
 
-    redirect_to join_event_path(event) unless attendee.present?
+    redirect_to join_event_path(event.hashid) unless attendee.present?
     redirect_to event, alert: "You already voted!" if @date_votes.voted?
   end
 
@@ -16,7 +16,7 @@ class DateVotesController < ApplicationController
     @date_votes = Event::DateVotes.new(date_votes_params)
 
     if @date_votes.submit
-      redirect_to event_path(@event), notice: 'Great Vote, Thanks!.'
+      redirect_to event_path(@event.hashid), notice: 'Great Vote, Thanks!.'
     else
       render :new
     end
