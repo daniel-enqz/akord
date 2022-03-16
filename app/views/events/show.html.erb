@@ -2,7 +2,7 @@
   <br>
   <h1><%= @event.title %></h1>
   <div class="btn">
-    <a href="#" class="btn btn-primary active">Share button event</a>
+    <a><%= link_to "Share event", join_event_path, class: "btn btn-primary" %></a>
   </div>
   <hr>
   <h5><%= @event.description  %><h5>
