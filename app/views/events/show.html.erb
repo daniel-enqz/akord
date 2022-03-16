@@ -2,10 +2,12 @@
   <br>
   <div class="container d-flex justify-content-between">
     <h1><%= @event.title %></h1>
-    <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
-      <input value="<%= short_join_event_url(@event) %>" data-clipboard-target="input" type="text" readonly>
-      <button class="btn btn-primary" data-action="click->clipboard#copy">Share with your compas</button>
-    </div>
+    <% if current_user.owns?(@event) %>
+      <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
+        <input value="<%= short_join_event_url(@event) %>" data-clipboard-target="input" type="text" readonly>
+        <button class="btn btn-primary" data-action="click->clipboard#copy">Share with your compas</button>
+      </div>
+    <%end%>
   </div>
   <hr>
   <h5><%= @event.description  %><h5>
