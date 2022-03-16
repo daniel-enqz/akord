@@ -1,7 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+user1 = User.create!(email: "user@user.com", password: 123456)
+valid_rates = Vote.rates.keys
+
+next_three_days = [Date.current, Date.current + 1, Date.current + 2]
+event1 = Event.create!(
+  title: "Le Wagon - Assado",
+  description: "Assado at Le Wagon",
+  user: user1,
+  votable_dates_strings: next_three_days
+)
+
+10.times do
+  next_three_days.each do |date|
+    event1.votes.create!(
+      date: date,
+      rate: valid_rates.sample,
+      attendee: Attendee.new(name: Faker::Name.name)
+    )
+  end
+end
