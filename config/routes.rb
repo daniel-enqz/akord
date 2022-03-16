@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :events, only: %i[new create show] do
     get "join", on: :member
 
-    resources :votes, only: %i[new create]
+    resources :date_votes, only: %i[new create]
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

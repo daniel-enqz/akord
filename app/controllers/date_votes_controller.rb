@@ -1,4 +1,4 @@
-class VotesController < ApplicationController
+class DateVotesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[new create]
   def new
     @event = Event.find(params[:event_id])
