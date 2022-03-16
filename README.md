@@ -22,6 +22,7 @@
 > gem 'devise' <br>
 > gem "faker" <br>
 > gem "groupdate" <br>
+> gem "hashid-rails", "~> 1.0" <br>
 
 ## Setup
 
