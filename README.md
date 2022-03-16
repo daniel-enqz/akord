@@ -6,7 +6,7 @@
 ## Main APP Features
 - A user can a create an event, and edit the same event.
 
-## APP SCHEMA
+## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
 
 
