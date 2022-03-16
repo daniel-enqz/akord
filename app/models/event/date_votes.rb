@@ -11,7 +11,6 @@ class Event::DateVotes
   end
 
   def votes_attributes=(value)
-    # raise
     @votes_attributes = value
   end
 
