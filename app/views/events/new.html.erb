@@ -8,8 +8,8 @@
         <%= f.input :votable_dates_strings, as: :string, input_html: { data: { controller: "pick-days" } } %>
       </div>
       <div class="form-actions">
-        <%= link_to "Not really", :back, class:"btn btn-link" %>
-        <%= f.button :submit, class:"btn btn-outline-primary" %>
+        <%= link_to "Cancel", :back, class:"btn btn-link" %>
+        <%= f.button :submit, class:"btn btn-outline-danger" %>
       </div>
     <% end %>
   </div>
