@@ -1,17 +1,22 @@
 class DateVotesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[new create]
   def new
-    @event = Event.find(params[:event_id])
-    @vote = Vote.new
+    # session[:attendee_id] = nil # remove after attendee cookie assignment is ready
+    event = Event.find(params[:event_id])
+    attendee = current_attendee
+    @date_votes = Event::DateVotes.new(attendee: attendee, event: event)
+
+    redirect_to join_event_path(event) unless attendee.present?
+    redirect_to event, alert: "You already voted!" if @date_votes.voted?
   end
 
   def create
     @event = Event.find(params[:event_id])
-    @vote = Vote.new(vote_params)
-    @vote.event = @event
-    # @vote.attendee = ??
-    if @event.save
-      redirect_to event_path(@event), notice: 'event was successfully created.'
+    @attendee = current_attendee
+    @date_votes = Event::DateVotes.new(date_votes_params)
+
+    if @date_votes.submit
+      redirect_to event_path(@event), notice: 'Great Vote, Thanks!.'
     else
       render :new
     end
@@ -19,11 +24,16 @@ class DateVotesController < ApplicationController
 
   private
 
+  def current_attendee
+    session[:attendee_id] = "fa1d484c-f0a2-4035-8afe-8c6601ddd45a" # remove after attendee cookie assignment is ready
+    session[:attendee_id].present? ? Attendee.find(session[:attendee_id]) : nil
+  end
+
   def set_event
     @event = Event.find(params[:id])
   end
 
-  def vote_params
-    params.require(:vote).permit(:rate, :date)
+  def date_votes_params
+    params.require(:event_date_votes).permit(votes_attributes: [:rate, :date]).merge(event: @event, attendee: @attendee)
   end
 end
