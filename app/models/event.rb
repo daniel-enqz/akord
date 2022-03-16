@@ -1,8 +1,13 @@
 class Event < ApplicationRecord
   belongs_to :user
+  has_many :votes
 
-  def votable_dates
-    votable_dates_strings.map { |date_string| Event::Date.new(date_string) }
+  def event_dates
+    votable_dates_strings.map { |date_string| Event::Date.new(date_string, self) }
+  end
+
+  def dates_rate
+    votes.group(:date).sum(:rate)
   end
 
   # Might help with flatpick values if they are JSON

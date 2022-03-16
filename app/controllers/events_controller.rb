@@ -1,14 +1,11 @@
 class EventsController < ApplicationController
-  # skip_before_action :authenticate_user!, only: %i[  ]
+  skip_before_action :authenticate_user!, only: %i[show]
   before_action :set_event, only: %i[show]
 
   def show
   end
 
   def join
-  end
-
-  def votes
   end
 
   def new
