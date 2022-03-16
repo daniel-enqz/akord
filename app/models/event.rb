@@ -2,6 +2,8 @@ class Event < ApplicationRecord
   belongs_to :user
   has_many :votes
 
+  attribute :title, :string, default: "Our Event"
+
   def event_dates
     votable_dates_strings.map { |date_string| Event::Date.new(date_string, self) }
   end
