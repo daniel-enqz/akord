@@ -18,3 +18,7 @@
     </p>
   <% end %>
 </div>
+<div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
+  <input data-clipboard-target="input" type="text" value="https://www.lewagon.com/" readonly>
+  <button class="btn btn-primary" data-action="click->clipboard#copy">Copy to Clipboard</button>
+</div>
