@@ -1,9 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
+  <div class="container-fluid d-flex justify-content-center">
     <% if user_signed_in? %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary log-out-button" %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-link" %>
     <% else %>
-        <%= link_to "Login", new_user_session_path, class: "btn btn-primary log-out-button" %>
+        <%= link_to "Login", new_user_session_path, class: "btn btn-link" %>
     <% end %>
   </div>
 </div>
