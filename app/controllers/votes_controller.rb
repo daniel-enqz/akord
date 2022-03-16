@@ -1,10 +1,4 @@
 class VotesController < ApplicationController
-<<<<<<< HEAD
-
-  def new
-  end
-
-=======
   skip_before_action :authenticate_user!, only: %i[new create]
   def new
     @event = Event.find(params[:event_id])
@@ -32,5 +26,4 @@ class VotesController < ApplicationController
   def vote_params
     params.require(:vote).permit(:rate, :date)
   end
->>>>>>> master
 end
