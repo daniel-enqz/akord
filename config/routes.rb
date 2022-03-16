@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  # Change this later
+  get "events/:id/join", to: "events#join", as: :short_join_event
+
   resources :events, only: %i[new create show] do
     resources :attendees, only: [:create]
     get "join", on: :member
