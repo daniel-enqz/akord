@@ -1,1 +1,10 @@
 <h1>Todos los eventos</h1>
+<div class="card-body">
+  <div class="container">
+    <% @events.each do |event| %>
+      <h3><%= event.title  %></h3>
+      <p class="card-text"><%= event.description %></p>
+      <button class="btn btn-info"><%= link_to "Visit", event_path(event) %></button>
+    <% end %>
+  </div>
+</div>
