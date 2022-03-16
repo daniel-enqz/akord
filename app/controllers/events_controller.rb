@@ -8,9 +8,6 @@ class EventsController < ApplicationController
   def join
   end
 
-  def votes
-  end
-
   def new
     @event = Event.new
   end

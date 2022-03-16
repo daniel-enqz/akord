@@ -4,7 +4,6 @@
   <hr>
   <h5><%= @event.description  %><h5>
   <p><strong>Event Creator:</strong> <%= @event.user.attendee.name.capitalize %> </p>
-  <%= raise %>
   <% @event.event_dates.each do |event_date| %>
     <p>
       <%= event_date.short_string %>
