@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   # Change this later
-  get "events/:id/join", to: "events#join", as: :short_join_event
+  get "e/:funid", to: "events#join", as: :short_join_event
 
   resources :events, only: %i[new create index show] do
     resources :attendees, only: [:create]
