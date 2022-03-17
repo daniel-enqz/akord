@@ -10,8 +10,9 @@ class EventsController < ApplicationController
   end
 
   # GET  /e/:funid
+  # GET  /e?funid=
   def join
-    @event = Event.find_by_funid(params[:funid])
+    @event = Event.find_by_funid!(params[:funid])
     @attendee = Attendee.new
   end
 
