@@ -16,6 +16,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "localtunnel": "^2.0.2",
     "webpack-dev-server": "^3"
   }
 }
