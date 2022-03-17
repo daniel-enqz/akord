@@ -1,7 +1,7 @@
 <div class="container">
   <br>
   <div class="container d-flex justify-content-between">
-    <h1><%= @event.title %></h1>
+    <h1><strong><%= @event.title %></strong></h1>
     <% if current_user&.owns?(@event) %>
       <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
         <input value="<%= short_join_event_url(@event) %>" data-clipboard-target="input" type="text" readonly>
@@ -12,14 +12,22 @@
   <hr>
   <h5><%= @event.description  %><h5>
   <p><strong>Event Creator:</strong> <%= @event.user.attendee.name.capitalize %> </p>
+  <hr>
   <% @event.event_dates.each do |event_date| %>
     <p>
-      <%= event_date.short_string %>
-      |
-      <%= event_date.rate %>
-      | yesses <%= event_date.yes_count %>
-      | nosses <%= event_date.no_count %>
-      | maybesessss <%= event_date.maybe_count %>
+      <strong><%= event_date.short_string %></strong>
+      | ✅ YES! <%= event_date.yes_count %>
+      | ❌ NO <%= event_date.no_count %>
+      | Ⓜ️ MAYBE <%= event_date.maybe_count %>
+      | 🥳VOTERS <% event_date.votes.each do |vote|%>
+                    <%= vote.attendee.name %>
+                  <% end %>
+      <div class="progress-outer">
+        <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped active"
+            style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
+        </div>
+      </div>
     </p>
   <% end %>
 </div>
