@@ -5,6 +5,26 @@
 
 ## Main APP Features
 - A user can a create an event, and edit the same event.
+- A user can't select past dates
+'''ruby
+  validate :votable_date_before_today
+  def votable_dates
+    votable_dates_strings.map { |ds| ::Date.parse(ds) }
+  end
+
+  private
+
+  def votable_date_before_today
+    errors.add(:votable_dates_strings, "Cannot select past dates") if any_past_dates?
+  end
+
+  def any_past_dates?
+    votable_dates.any? { |date| date < ::Date.current }
+  end
+  
+  ![image](https://user-images.githubusercontent.com/71459774/158896156-2b1c8a7f-20b8-463e-b658-347a29f30e69.png)
+   minDate: "today"
+'''
 
 ## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
