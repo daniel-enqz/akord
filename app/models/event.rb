@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  include Hashid::Rails
+
   belongs_to :user
   has_many :votes
 
