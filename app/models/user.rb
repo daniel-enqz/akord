@@ -11,6 +11,7 @@ class User < ApplicationRecord
   def owns?(event)
     event.user == self
   end
+
   private
 
   def create_attendee

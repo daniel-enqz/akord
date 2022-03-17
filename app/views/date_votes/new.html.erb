@@ -5,8 +5,8 @@
     <h5><%= @date_votes.event.description %></h5>
       <%= simple_form_for @date_votes, url: event_date_votes_path do |f| %>
         <%= f.simple_fields_for :votes do |fv| %>
-          <%= fv.input :date, as: :hidden  %>
-          <%= fv.input :rate, label: fv.object.date, collection: Vote.rates, as: :radio_buttons  %>
+          <%= fv.input :date, as: :hidden %>
+          <%= fv.input :rate, label: fv.object.event_date.short_string, collection: Vote.rates, as: :radio_buttons  %>
         <% end %>
       <%= f.button :submit, class:"btn btn-outline-primary" %>
     <% end %>
