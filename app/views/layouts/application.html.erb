@@ -16,9 +16,11 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> %>
   </head>
 
-  <body>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
+  <body class= "site">
+    <main class= site-content>
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+    </main>
     <%= render 'shared/footer' %>
   </body>
 </html>
