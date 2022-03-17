@@ -1,7 +1,7 @@
 <div class="container">
   <br>
   <h1>
-    PIN
+    Joining <%= @event.title %>
   </h1>
     <%= simple_form_for [@event, @attendee] do |f| %>
     <%= f.input :name %>

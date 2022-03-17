@@ -5,6 +5,24 @@
 
 ## Main APP Features
 - A user can a create an event, and edit the same event.
+- A user can't select past dates
+```ruby
+  validate :votable_date_before_today
+  def votable_dates
+    votable_dates_strings.map { |ds| ::Date.parse(ds) }
+  end
+
+  private
+
+  def votable_date_before_today
+    errors.add(:votable_dates_strings, "Cannot select past dates") if any_past_dates?
+  end
+
+  def any_past_dates?
+    votable_dates.any? { |date| date < ::Date.current }
+  end
+```
+![image](https://user-images.githubusercontent.com/71459774/158896156-2b1c8a7f-20b8-463e-b658-347a29f30e69.png)
 
 ## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
@@ -18,6 +36,7 @@
 > Active Record (Example: `rails g model`) <br>
 > Heroku Deployment `heroku/7.59.2 linux-x64 node-v12.21.0 `<br>
 > `pgcrypto` (in order to add `:uuid` or <strong>Universally unique identifier</strong> to an attendee, so that a user logged in can also vote) <br>
+>  `hashid rails` Instead the event model ID using sequential numbers like 1, 2, 3, it will instead have unique short hashes like "yLA6m0oM" <br>
 > <img src="https://user-images.githubusercontent.com/72522628/158295411-9dd5ff4a-e40c-4d15-a0b9-0ec257d5ea6f.png"> <br>
 > gem 'devise' <br>
 > gem "faker" <br>
