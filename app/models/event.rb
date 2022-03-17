@@ -5,6 +5,7 @@ class Event < ApplicationRecord
   has_many :votes
 
   attribute :title, :string, default: "Our Event"
+  validates :title, :description, presence: true
 
   def event_dates
     votable_dates_strings.map { |date_string| Event::Date.new(date_string, self) }
