@@ -12,7 +12,8 @@ export default class extends Controller {
         altInput: true,
         dateFormat: "Y-m-d",
         inline: "true",
-        altInputClass: "invisible"
+        altInputClass: "invisible",
+        minDate: "today"
       }
     );
   }
