@@ -31,12 +31,13 @@ class Event < ApplicationRecord
   end
 
   private
-  
+
   def generate_fun_id
     nouns = %w[goose pancake pie gorilla memory shirt pickle fruit beast house]
     adjectives = %w[pretty funky smelly dirty silly tiny kind huge lovely delighful sweet]
     self.funid = "#{adjectives.sample}-#{nouns.sample}"
   end
+
   def votable_date_before_today
     errors.add(:votable_dates_strings, "Cannot select past dates") if any_past_dates?
   end

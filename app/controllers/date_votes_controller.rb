@@ -14,8 +14,8 @@ class DateVotesController < ApplicationController
     @event = Event.find(params[:event_id])
     @attendee = current_attendee
     @date_votes = Event::DateVotes.new(date_votes_params)
-
     if @date_votes.submit
+      raise
       redirect_to event_path(@event.hashid), notice: 'Great Vote, Thanks!.'
     else
       render :new
