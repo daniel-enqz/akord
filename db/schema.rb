@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_15_230830) do
+ActiveRecord::Schema.define(version: 2022_03_17_200850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2022_03_15_230830) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.jsonb "votable_dates_strings", default: [], null: false
+    t.string "funid", null: false
+    t.index ["funid"], name: "index_events_on_funid", unique: true
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -49,7 +51,7 @@ ActiveRecord::Schema.define(version: 2022_03_15_230830) do
 
   create_table "votes", force: :cascade do |t|
     t.date "date"
-    t.integer "rate", default: 0, null: false
+    t.integer "rate", default: 1, null: false
     t.bigint "event_id", null: false
     t.uuid "attendee_id", null: false
     t.datetime "created_at", precision: 6, null: false
