@@ -5,12 +5,14 @@ import { Controller } from "stimulus"
 export default class extends Controller {
 
   connect() {
-    console.log("Connected!");
     flatpickr(
       this.element,
       {
         mode: "multiple",
-        dateFormat: "Y-m-d"
+        altInput: true,
+        dateFormat: "Y-m-d",
+        inline: "true",
+        altInputClass: "invisible"
       }
     );
   }

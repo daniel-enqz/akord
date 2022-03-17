@@ -7,4 +7,8 @@ class Vote < ApplicationRecord
 
   belongs_to :event
   belongs_to :attendee
+
+  def event_date
+    Event::Date.new(date_before_type_cast, event)
+  end
 end

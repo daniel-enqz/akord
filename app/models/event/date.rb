@@ -9,7 +9,7 @@ class Event::Date
 
   # Example of things the view might need
   def short_string
-    value.strftime("%b %d")
+    value.strftime("%b %d, %Y")
   end
 
   def votes
