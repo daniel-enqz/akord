@@ -37,6 +37,6 @@ class Event::Date
   end
 
   def progress_bar_value
-    (yes_count * 100) / total_votes
+    total_votes == 0 ? 0 : (yes_count * 100) / total_votes
   end
 end
