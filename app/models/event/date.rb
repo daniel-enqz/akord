@@ -20,6 +20,10 @@ class Event::Date
     votes.sum(:rate)
   end
 
+  def total_votes
+    votes.count
+  end
+
   def yes_count
     votes.where(rate: :yes).count
   end
@@ -30,5 +34,9 @@ class Event::Date
 
   def maybe_count
     votes.where(rate: :maybe).count
+  end
+
+  def progress_bar_value
+    (yes_count * 100) / total_votes
   end
 end

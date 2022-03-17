@@ -5,6 +5,4 @@ class Attendee < ApplicationRecord
   def visitor?
     user.blank?
   end
-
-
 end
