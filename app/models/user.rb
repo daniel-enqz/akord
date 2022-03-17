@@ -18,5 +18,4 @@ class User < ApplicationRecord
     attendee_name = email.gsub(/^(.*?)@.*/, '\1')
     create_attendee!(name: attendee_name)
   end
-
 end

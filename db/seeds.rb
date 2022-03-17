@@ -1,4 +1,10 @@
-user1 = User.create!(email: "user@user.com", password: 123456)
+# Users Generation
+default_password = "123456"
+5.times do |n|
+  User.create!(email: "user#{n}@user.com", password: default_password,
+               name: Faker::Name.first_name)
+end
+
 valid_rates = Vote.rates.keys
 
 next_three_days = [Date.current, Date.current + 1, Date.current + 2]
