@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_200850) do
 
   create_table "votes", force: :cascade do |t|
     t.date "date"
-    t.integer "rate", default: 1, null: false
+    t.integer "rate", default: 0, null: false
     t.bigint "event_id", null: false
     t.uuid "attendee_id", null: false
     t.datetime "created_at", precision: 6, null: false
