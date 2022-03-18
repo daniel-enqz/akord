@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.hashid %>">
   <br>
   <div class="container d-flex justify-content-between">
     <h1><strong><%= @event.title %></strong></h1>
@@ -13,30 +13,33 @@
   <h5><%= @event.description  %><h5>
   <p><strong>Event Creator:</strong> <%= @event.user.attendee.name.capitalize %> </p>
   <hr>
-  <% @event.event_dates.each do |event_date| %>
-    <div data-controller="show-voting-details" class="mt-5 mb-5">
-      <div class="d-flex">
-        <strong><%= event_date.short_string %></strong>
-        | ✅ <%= event_date.yes_count %> | ❌ <%= event_date.no_count %> |
-        <div class="details ms-2">
-          <button class="badge btn btn-primary" data-action="click->show-voting-details#displayVoters">
-            Voters <span class="badge bg-secondary"><%= event_date.total_votes %></span>
-          </button>
+  <div class="dates" data-event-subscription-target="dates">
+    <% @event.event_dates.each do |event_date| %>
+      <div data-date=<%= event_date.value %> data-controller="show-voting-details" class="mt-5 mb-5">
+        <div class="d-flex">
+          <strong><%= event_date.short_string %></strong>
+          | ✅ <span class="yes-display"><%= event_date.yes_count %></span>
+          | ❌ <span class="no-display"><%= event_date.no_count %></span> |
+          <div class="details ms-2">
+            <button class="badge btn btn-primary" data-action="click->show-voting-details#displayVoters">
+              Voters <span class="badge bg-secondary total-display"><%= event_date.total_votes %></span>
+            </button>
+          </div>
+        </div>
+        <div class="card d-none mt-2" data-show-voting-details-target="voters">
+          <div class="card-body">
+            🥳<% event_date.votes.each do |vote|%>
+              <%= vote.attendee.name %>
+            <% end %>
+          </div>
+        </div>
+        <div class="progress-outer">
+          <div class="progress">
+              <div class="progress-bar progress-bar-info progress-bar-striped active"
+              style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
+          </div>
         </div>
       </div>
-      <div class="card d-none mt-2" data-show-voting-details-target="voters">
-        <div class="card-body">
-          🥳<% event_date.votes.each do |vote|%>
-            <%= vote.attendee.name %>
-          <% end %>
-        </div>
-      </div>
-      <div class="progress-outer">
-        <div class="progress">
-            <div class="progress-bar progress-bar-info progress-bar-striped active"
-            style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
-        </div>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
