@@ -17,10 +17,18 @@
     <div data-controller="show-voting-details" class="mt-5 mb-5">
       <div class="d-flex">
         <strong><%= event_date.short_string %></strong>
+        | ✅ <%= event_date.yes_count %> | ❌ <%= event_date.no_count %> |
         <div class="details ms-2">
-          <button class="badge btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" title="| ✅ <%= event_date.yes_count %> | ❌ <%= event_date.no_count %> | Ⓜ️ <%= event_date.maybe_count %>">
-            Details
+          <button class="badge btn btn-primary" data-action="click->show-voting-details#displayVoters">
+            Voters <span class="badge bg-secondary"><%= event_date.total_votes %></span>
           </button>
+        </div>
+      </div>
+      <div class="card d-none mt-2" data-show-voting-details-target="voters">
+        <div class="card-body">
+          🥳<% event_date.votes.each do |vote|%>
+            <%= vote.attendee.name %>
+          <% end %>
         </div>
       </div>
       <div class="progress-outer">
