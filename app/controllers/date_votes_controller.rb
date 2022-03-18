@@ -1,7 +1,6 @@
 class DateVotesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[new create]
   def new
-    # session[:attendee_id] = nil # remove after attendee cookie assignment is ready
     event = Event.find(params[:event_id])
     attendee = current_attendee
     @date_votes = Event::DateVotes.new(attendee: attendee, event: event)
