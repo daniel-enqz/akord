@@ -16,18 +16,23 @@
   <% @event.event_dates.each do |event_date| %>
     <p>
       <strong><%= event_date.short_string %></strong>
-      | ✅ YES! <%= event_date.yes_count %>
-      | ❌ NO <%= event_date.no_count %>
-      | Ⓜ️ MAYBE <%= event_date.maybe_count %>
-      | 🥳VOTERS <% event_date.votes.each do |vote|%>
-                    <%= vote.attendee.name %>
-                  <% end %>
-      <div class="progress-outer">
-        <div class="progress">
-            <div class="progress-bar progress-bar-info progress-bar-striped active"
-            style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
+      <div class="details" data-controller="show-voting-details">
+        <a data-action="click->show-voting-details#displayDetails"></a>
+        <div class="d-none" data-show-voting-details-target="details">
+          | ✅ YES! <%= event_date.yes_count %>
+          | ❌ NO <%= event_date.no_count %>
+          | Ⓜ️ MAYBE <%= event_date.maybe_count %>
+          | 🥳VOTERS <% event_date.votes.each do |vote|%>
+                        <%= vote.attendee.name %>
+                      <% end %>
         </div>
       </div>
+        <div class="progress-outer">
+          <div class="progress">
+              <div class="progress-bar progress-bar-info progress-bar-striped active"
+              style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
+          </div>
+        </div>
     </p>
   <% end %>
 </div>
