@@ -37,6 +37,14 @@ class Event::Date
   end
 
   def progress_bar_value
-    total_votes == 0 ? 0 : (yes_count * 100) / total_votes
+    total_votes.zero? ? 0 : (yes_count * 100) / total_votes
+  end
+
+  def limt_three_voters
+    i = 0
+    while i < 3
+      event_date.votes[i].attendee.name
+      i += 1
+    end
   end
 end

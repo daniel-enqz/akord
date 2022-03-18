@@ -1,12 +1,12 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[show join]
-  before_action :set_event, only: %i[show]
 
   def index
     @events = current_user.events
   end
 
   def show
+    @event = Event.find(params[:id])
   end
 
   # GET  /e/:funid
@@ -31,10 +31,6 @@ class EventsController < ApplicationController
   end
 
   private
-
-  def set_event
-    @event = Event.find(params[:id])
-  end
 
   def event_params
     params.require(:event).permit(:title, :description, :votable_dates_strings)

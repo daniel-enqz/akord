@@ -1,4 +1,4 @@
-# SET THE DATE
+# AKORD.ME
 ### CHECK DEPLOYED <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"> APP HERE
 
 > *PLACE SOME PROJECT IMAGES HERE (HOME PAGE OR OTHER RELEVANT PAGES)*
@@ -23,6 +23,47 @@
   end
 ```
 ![image](https://user-images.githubusercontent.com/71459774/158896156-2b1c8a7f-20b8-463e-b658-347a29f30e69.png)
+
+- A user can share our event with a button, the funtion is a combination beteween Ruby code and Js, the name of this is Clipboard button 
+```ruby
+<% if current_user&.owns?(@event) %>
+      <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
+        <input value="<%= short_join_event_url(@event.funid) %>" data-clipboard-target="input" type="text" readonly>
+        <button class="btn btn-primary" data-action="click->clipboard#copy">Share with your compas</button>
+      </div>
+    <%end%>
+```
+```JavaScript
+import { Controller } from "stimulus";
+
+export default class extends Controller {
+  static targets = ["input"];
+  static values = {
+    feedbackText: String
+  }
+
+  copy(event) {
+    this.inputTarget.select();
+    document.execCommand('copy');
+    event.currentTarget.disabled = true;
+    event.currentTarget.innerText = this.feedbackTextValue;
+  }
+}
+
+```
+![image](https://user-images.githubusercontent.com/71459774/159031437-d4d85c2b-dad9-4451-886f-55e5bd3917bb.png)
+
+- A user we can see how was the date voting, and for that we added a ProgresBar
+```ruby
+<div class="progress-outer">
+        <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped active"
+            style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
+        </div>
+      </div>
+```
+![image](https://user-images.githubusercontent.com/71459774/159033563-f9e80f61-0033-4c32-ae0b-aba1d8f0fe4e.png)
+
 
 ## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
@@ -54,7 +95,3 @@
  rails server
 ```
 Open you browser and visit `localhost:3000`
-
-CHANGING REMOTE NAME LOCALLY
-`git remote set-url origin git@github.com:daniel-enqz/akord.git`
-Then if you want, type `cd ..` and do `mv set-the-date akord` (this will change the folder in github to the new app name
