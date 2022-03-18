@@ -3,12 +3,12 @@
     <div class="row">
       <div>
         <%= image_tag "akord.png", height: 200 %>
-        <div class="form-login m-1 text-center">
+        <div class="blurr-filter form-login m-1 text-center">
           <h3>
             Joining <%= @event.title %>
           </h3>
             <%= simple_form_for [@event, @attendee] do |f| %>
-            <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John" %>
+            <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John", class: "blurr-filter" %>
             <%= f.button :submit, value:"Join", class:"btn btn-danger" %>
           <% end %>
         </div>
