@@ -1,16 +1,24 @@
-<div class="container-sm">
-  <div class="d-flex flex-column m-5">
-    <h1 class="fw-bold border-bottom">Create your event!</h1>
-      <%= simple_form_for @event do |f| %>
-      <div class="form-inputs">
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :votable_dates_strings, label: "Pick some dates...", as: :string, input_html: { data: { controller: "pick-days" } } %>
+<div class="container min-vh-100 d-flex justify-content-center">
+  <div class="d-flex flex-column">
+    <div class="card w-100 bg-info mt-4">
+      <div class="card-body ">
+        <h2 class="card-title fw-bold text-primary">Let's create an event!</h2>
       </div>
-      <div class="form-actions">
-        <%= link_to "Cancel", :back, class:"btn btn-link" %>
-        <%= f.button :submit, class:"btn btn-outline-danger" %>
+    </div>
+    <div class="card w-100 bg-info mt-4">
+      <div class="card-body text-primary">
+        <%= simple_form_for @event do |f| %>
+          <div class="form-inputs">
+            <%= f.input :title %>
+            <%= f.input :description%>
+            <%= f.input :votable_dates_strings, label: "Choose possible dates", as: :string, input_html: { data: { controller: "pick-days" } } %>
+          </div>
+          <div class="form-actions">
+            <%= link_to "Cancel", :back, class:"btn btn-link" %>
+            <%= f.button :submit, class:"btn btn-outline-danger" %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
