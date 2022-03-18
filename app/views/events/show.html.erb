@@ -22,20 +22,6 @@
             Details
           </button>
         </div>
-        <div class="details ms-2">
-          <button class="badge btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-            title="🥳VOTERS <% event_date.votes.each do |vote|%>
-                                <%= vote.attendee.name %>
-                              <% end %>">Voters
-          </button>
-        </div>
-      </div>
-      <div class="card d-none mt-2" data-show-voting-details-target="voters">
-        <div class="card-body">
-          🥳VOTERS <% event_date.votes.each do |vote|%>
-            <%= vote.attendee.name %>
-          <% end %>
-        </div>
       </div>
       <div class="progress-outer">
         <div class="progress">
