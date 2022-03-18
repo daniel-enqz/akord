@@ -5,7 +5,7 @@
     <% if current_user&.owns?(@event) %>
       <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
         <input value="<%= short_join_event_url(@event.funid) %>" data-clipboard-target="input" type="text" readonly>
-        <button class="btn btn-primary" data-action="click->clipboard#copy">Share with your compas</button>
+        <button class="btn btn-primary" data-action="click->clipboard#copy">Copy invite link</button>
       </div>
     <%end%>
   </div>
