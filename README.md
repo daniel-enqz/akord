@@ -54,7 +54,3 @@
  rails server
 ```
 Open you browser and visit `localhost:3000`
-
-CHANGING REMOTE NAME LOCALLY
-`git remote set-url origin git@github.com:daniel-enqz/akord.git`
-Then if you want, type `cd ..` and do `mv set-the-date akord` (this will change the folder in github to the new app name
