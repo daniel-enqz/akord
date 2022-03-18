@@ -87,3 +87,7 @@
     visibility: hidden;
   }
 }
+
+check-input.is-valid ~ .form-check-label {
+  color: #111;
+}
