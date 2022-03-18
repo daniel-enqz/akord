@@ -10,7 +10,7 @@
           <strong><%= fv.input :rate, label: fv.object.event_date.short_string, collection: Vote.rates, as: :radio_buttons %></strong>
         </div>
       <% end %>
-    <%= f.button :submit, class:"btn btn-outline-primary", value: "VOTE!" %>
+    <%= f.button :submit, class:"voting-button btn btn-primary", value: "VOTE!" %>
     <% end %>
   </div>
 </div>
