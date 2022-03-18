@@ -3,12 +3,14 @@
     <p>Welcome, <%= current_attendee.name %></p>
     <h1 class="fw-bold border-bottom">WHAT'S YOUR PREFERRED DAY FOR <%= @date_votes.event.title %></h1>
     <h5><%= @date_votes.event.description %></h5>
-      <%= simple_form_for @date_votes, url: event_date_votes_path do |f| %>
-        <%= f.simple_fields_for :votes do |fv| %>
+    <%= simple_form_for @date_votes, url: event_date_votes_path do |f| %>
+      <%= f.simple_fields_for :votes do |fv| %>
+        <div class="inputGroup">
           <%= fv.input :date, as: :hidden %>
-          <%= fv.input :rate, label: fv.object.event_date.short_string, collection: Vote.rates, as: :radio_buttons  %>
-        <% end %>
-      <%= f.button :submit, class:"btn btn-outline-primary" %>
+          <strong><%= fv.input :rate, label: fv.object.event_date.short_string, collection: Vote.rates, as: :radio_buttons %></strong>
+        </div>
+      <% end %>
+    <%= f.button :submit, class:"btn btn-outline-primary", value: "VOTE!" %>
     <% end %>
   </div>
 </div>
