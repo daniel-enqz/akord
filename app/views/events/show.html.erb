@@ -1,6 +1,6 @@
 <div class="container">
   <br>
-  <div class="container d-flex justify-content-between">
+  <div class="container d-flex justify-content-between" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.hashid %>" >
     <h1><strong><%= @event.title %></strong></h1>
     <% if current_user&.owns?(@event) %>
       <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
