@@ -33,6 +33,24 @@
       </div>
     <%end%>
 ```
+```JavaScript
+import { Controller } from "stimulus";
+
+export default class extends Controller {
+  static targets = ["input"];
+  static values = {
+    feedbackText: String
+  }
+
+  copy(event) {
+    this.inputTarget.select();
+    document.execCommand('copy');
+    event.currentTarget.disabled = true;
+    event.currentTarget.innerText = this.feedbackTextValue;
+  }
+}
+
+```
 ![image](https://user-images.githubusercontent.com/71459774/159031437-d4d85c2b-dad9-4451-886f-55e5bd3917bb.png)
 
 ## APP DB SCHEMA
