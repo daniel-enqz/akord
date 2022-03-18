@@ -3,13 +3,13 @@
     <%= image_tag "akord.png", height: 200 %>
     <div class="row justify-content-center">
       <div>
-        <div class="form-login m-1">
+        <div class="blurr-filter form-login m-1">
           <%= simple_form_for :join, url: pin_join_event_path, method: :get do |f|  %>
             <%# ?join={funid:kind-memory} %>
             <div class="container d-flex justify-content-center m-1">
               <%= label_tag :funid, " " %>
-              <%= text_field_tag :funid, nil, placeholder:"Event-code" %>
-              <%= f.button :submit, value:"Join", class:"btn btn-danger" %>
+              <%= text_field_tag :funid, nil, placeholder:"Event-code", class: "blurr-filter" %>
+              <%= f.button :submit, value:"Join", class:"button-radius btn btn-danger" %>
             </div>
           <% end %>
         </div>
