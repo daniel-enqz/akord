@@ -24,6 +24,17 @@
 ```
 ![image](https://user-images.githubusercontent.com/71459774/158896156-2b1c8a7f-20b8-463e-b658-347a29f30e69.png)
 
+-A user can share our event with a button, the funtion is a combination beteween Ruby code and Js, the name of this is Clipboard button 
+```ruby
+<% if current_user&.owns?(@event) %>
+      <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
+        <input value="<%= short_join_event_url(@event.funid) %>" data-clipboard-target="input" type="text" readonly>
+        <button class="btn btn-primary" data-action="click->clipboard#copy">Share with your compas</button>
+      </div>
+    <%end%>
+```
+![image](https://user-images.githubusercontent.com/71459774/159031437-d4d85c2b-dad9-4451-886f-55e5bd3917bb.png)
+
 ## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
 
