@@ -1,14 +1,17 @@
-<div class="container min-vh-100 d-flex justify-content-center align-items-center">
-  <div class="row ">
-    <div class="col-sm-12 col-6 ">
-      <div class="form-login m-1">
-        <h1>
-          Joining <%= @event.title %>
-        </h1>
-          <%= simple_form_for [@event, @attendee] do |f| %>
-          <%= f.input :name %>
-          <%= f.button :submit, value:"Join", class:"btn btn-danger" %>
-        <% end %>
+<div class="wrapper">
+  <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="row">
+      <div class="col-sm-12 col-6 ">
+        <%= image_tag "akord.png", height: 200 %>
+        <div class="form-login m-1 text-center">
+          <h3>
+            Joining <%= @event.title %>
+          </h3>
+            <%= simple_form_for [@event, @attendee] do |f| %>
+            <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John" %>
+            <%= f.button :submit, value:"Join", class:"btn btn-danger" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

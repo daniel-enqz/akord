@@ -1,14 +1,20 @@
-<div class="container min-vh-100 d-flex justify-content-center align-items-center">
-  <div class="row ">
-    <div class="col-sm-12 col-6 ">
-      <div class="form-login m-1">
-        <%= simple_form_for :join, url: pin_join_event_path, method: :get do |f|  %>
-          <%# ?join={funid:kind-memory} %>
-          <%= label_tag :funid %>
-          <%= text_field_tag :funid, nil %>
-          <%= f.button :submit, value:"Join", class:"btn btn-danger" %>
-        <% end %>
+<div class="wrapper">
+  <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="row">
+      <div class="col-sm-12 col-6 ">
+        <%= image_tag "akord.png", height: 200 %>
+        <div class="form-login m-1">
+          <%= simple_form_for :join, url: pin_join_event_path, method: :get do |f|  %>
+            <%# ?join={funid:kind-memory} %>
+            <div class="container d-flex justify-content-center m-1">
+              <%= label_tag :funid, " " %>
+              <%= text_field_tag :funid, nil, placeholder:"Event-code" %>
+              <%= f.button :submit, value:"Join", class:"btn btn-danger" %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
+
 </div>

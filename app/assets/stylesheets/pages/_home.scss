@@ -8,3 +8,16 @@
 .site-content {
   flex: 1;
 }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,#F178B6, #5D5FEF, #A5A6F6 , #ABE7FC,#8ED2BA, #ECF3FF);
+  background-size: 600% 100%;
+  animation: gradient 10s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
