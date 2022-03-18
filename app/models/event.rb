@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   belongs_to :user
   has_many :votes
 
-  before_create :generate_fun_id
+  before_create :set_funid_pin
 
   attribute :title, :string, default: "Our Event"
   validates :title, presence: true
@@ -32,10 +32,17 @@ class Event < ApplicationRecord
 
   private
 
+  def set_funid_pin
+    self.funid = generate_fun_id
+  end
+
   def generate_fun_id
     nouns = %w[goose pancake pie gorilla memory shirt pickle fruit beast house]
     adjectives = %w[pretty funky smelly dirty silly tiny kind huge lovely delighful sweet]
-    self.funid = "#{adjectives.sample}-#{nouns.sample}"
+    loop do
+      funid = "#{adjectives.sample}-#{nouns.sample}"
+      break funid unless Event.where(funid: funid).exists?
+    end
   end
 
   def votable_date_before_today
