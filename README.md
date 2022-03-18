@@ -53,6 +53,18 @@ export default class extends Controller {
 ```
 ![image](https://user-images.githubusercontent.com/71459774/159031437-d4d85c2b-dad9-4451-886f-55e5bd3917bb.png)
 
+-A user we can see how was the date voting, and for that we added a ProgresBar
+```ruby
+<div class="progress-outer">
+        <div class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped active"
+            style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
+        </div>
+      </div>
+```
+![image](https://user-images.githubusercontent.com/71459774/159033563-f9e80f61-0033-4c32-ae0b-aba1d8f0fe4e.png)
+
+
 ## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
 
