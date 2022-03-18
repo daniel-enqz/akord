@@ -1,4 +1,4 @@
-# SET THE DATE
+# AKORD.ME
 ### CHECK DEPLOYED <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"> APP HERE
 
 > *PLACE SOME PROJECT IMAGES HERE (HOME PAGE OR OTHER RELEVANT PAGES)*
