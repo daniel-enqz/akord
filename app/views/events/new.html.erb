@@ -10,7 +10,7 @@
         <div class="card-body text-primary">
           <%= simple_form_for @event do |f| %>
             <div class="form-inputs">
-              <%= f.input :title %>
+              <%= f.input :title%>
               <%= f.input :description%>
               <%= f.input :votable_dates_strings, label: "Choose possible dates", as: :string, input_html: { data: { controller: "pick-days" } } %>
             </div>
