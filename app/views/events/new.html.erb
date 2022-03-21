@@ -9,14 +9,14 @@
       <div class="card w-100 mt-3 blurr-filter">
         <div class="card-body text-primary">
           <%= simple_form_for @event do |f| %>
-            <div class="form-inputs">
+            <div class="form-inputs text-white">
               <%= f.input :title%>
               <%= f.input :description%>
-              <%= f.input :votable_dates_strings, label: "Choose possible dates", as: :string, input_html: { data: { controller: "pick-days" } } %>
+              <%= f.input :votable_dates_strings, label: "Choose possible dates", as: :string, input_html: { data: { controller: "pick-days" } }, wrapper_html: { class: "flatpickr-calendar-custom" } %>
             </div>
             <div class="form-actions">
-              <%= link_to "Cancel", :back, class:"btn btn-link" %>
-              <%= f.button :submit, class:"btn btn-outline-danger" %>
+              <%= link_to "Cancel", :back, class:"btn btn-secondary" %>
+              <%= f.button :submit, class:"btn btn-danger ms-3" %>
             </div>
           <% end %>
         </div>

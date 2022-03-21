@@ -1,16 +1,18 @@
 <div class="wrapper">
-  <div class="container min-vh-100 d-flex justify-content-center align-items-center">
-    <div class="row">
-      <div class= col-sm-8>
-        <%= image_tag "akord.png", height: 200, class: "img-fluid" %>
-        <div class="blurr-filter form-login m-1 text-center">
+  <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center">
+    <div class= col-sm-6>
+      <%= image_tag "akord.png", height: 200, class: "img-fluid" %>
+      <div class="justify-content-center">
+        <div class="form-login blurr-filter m-1 text-center">
           <h3>
             Joining <%= @event.title %>
           </h3>
-            <%= simple_form_for [@event, @attendee] do |f| %>
-            <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John", class: "blurr-filter" %>
-            <%= f.button :submit, value:"Join", class:"btn btn-danger" %>
-          <% end %>
+            <div class="container d-flex justify-content-center m-1">
+              <%= simple_form_for [@event, @attendee] do |f| %>
+              <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John", input_html: { class: "blurr-filter border-0" } %>
+              <%= f.button :submit, value:"Join", class:"button-radius btn btn-danger" %>
+              <% end %>
+            </div>
         </div>
       </div>
     </div>
