@@ -3,11 +3,45 @@
 }
 
 .swipe-yes {
-  background-color: aquamarine;
-  box-shadow: 0 0  10px aquamarine;
+  border-width: 3px;
+  border-color: aquamarine;
+  // background-color: aquamarine;
+  // box-shadow: 0 0  10px aquamarine;
+
+  .icons {
+
+    color: aquamarine;
+    border: 4px aquamarine dashed;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
 }
 
 .swipe-no {
-  background-color: rgb(255, 127, 127);
-  box-shadow: 0 0  10px rgb(255, 127, 127);
+  border-width: 3px;
+  border-color: rgb(255, 127, 127);
+  // background-color: rgb(255, 127, 127);
+  // box-shadow: 0 0  10px rgb(255, 127, 127);
+
+  .icons {
+
+    color: rgb(255, 127, 127);
+    border: 4px rgb(255, 127, 127) dashed;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
 }

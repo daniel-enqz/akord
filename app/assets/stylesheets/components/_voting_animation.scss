@@ -1,11 +1,27 @@
+// SLIDE UP ANIMATION
 @keyframes slideUp {
   0% { opacity: 0; transform: translateY(0); }
   50% { opacity: 1; transform: translateY(-10px); }
   100% { opacity: 0; transform: translateY(-20px); }
 }
+
 .slide-up {
   animation-name: slideUp;
   animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+// PUNCH ANIMATION
+@keyframes punchIn {
+  0% { opacity: 0; transform: scale(3); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.punch-in {
+  animation-name: punchIn;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
