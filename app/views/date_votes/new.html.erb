@@ -1,8 +1,9 @@
 <div class="container-sm">
   <div class="d-flex flex-column m-5">
-    <p>Welcome, <%= current_attendee.name %></p>
-    <h1 class="fw-bold border-bottom">WHAT'S YOUR PREFERRED DAY FOR <%= @date_votes.event.title %></h1>
-    <h5><%= @date_votes.event.description %></h5>
+    <h4  class="fw-bold text-primary">Hey <%= current_attendee.name.capitalize %>! you are invited to <%= @date_votes.event.title %> </h4>
+    <p><%= @date_votes.event.description %></p>
+    <h5>We are trying to <strong class="fw-bold text-danger">Akord</strong> on a date for <%= @date_votes.event.title %></h5>
+    <h5 class="border-bottom fw-bold text-primary">Your vote helps!</h5>
     <%= simple_form_for @date_votes, url: event_date_votes_path do |f| %>
       <%= f.simple_fields_for :votes do |fv| %>
         <div class="inputGroup">
