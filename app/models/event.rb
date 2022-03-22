@@ -7,7 +7,6 @@ class Event < ApplicationRecord
 
   before_create :set_funid_pin
 
-  attribute :title, :string, default: "Our Event"
   validates :title, presence: true
 
   validate :votable_date_before_today

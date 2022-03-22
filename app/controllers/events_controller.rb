@@ -24,7 +24,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
-      redirect_to event_path(@event.hashid), notice: 'event was successfully created.'
+      redirect_to event_path(@event.hashid), notice: 'Event was successfully created.'
     else
       render :new
     end
