@@ -1,0 +1,51 @@
+.smooth-transition {
+  transition: left 0.25s;
+}
+
+.icons.opacify {
+  opacity: 7%;
+  color: black !important;
+  border-color: black !important;
+}
+
+.swipe-yes {
+  .voting-card {
+  border-width: 4px;
+  border-color: aquamarine;
+  }
+
+  .icons {
+    color: aquamarine;
+    border: 4px aquamarine dashed;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-right: 2rem;
+  }
+}
+
+.swipe-no {
+  border-width: 4px;
+  border-color: rgb(255, 127, 127);
+
+  .icons {
+    color: rgb(255, 127, 127);
+    border: 4px rgb(255, 127, 127) dashed;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-right: 2rem;
+  }
+}
