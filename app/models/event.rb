@@ -3,10 +3,10 @@ class Event < ApplicationRecord
 
   belongs_to :user
   has_many :votes
+  has_many :attendees, -> { distinct }, through: :votes
 
   before_create :set_funid_pin
 
-  attribute :title, :string, default: "Our Event"
   validates :title, presence: true
 
   validate :votable_date_before_today

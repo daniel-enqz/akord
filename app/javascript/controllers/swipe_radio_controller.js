@@ -3,7 +3,7 @@ import Hammer from "hammerjs"
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ["input", "thumbsup", "thumbsdown", "icons"]
+  static targets = ["input", "thumbsup", "thumbsdown", "icons", "maybe"]
 
   connect() {
     this.initialX = this.element.getBoundingClientRect().x
@@ -57,11 +57,14 @@ export default class extends Controller {
   #displayIcon() {
     if (this.currentValue == "yes") {
       this.thumbsupTarget.classList.remove("d-none")
+      this.maybeTarget.classList.add("d-none")
       this.thumbsdownTarget.classList.add("d-none")
     } else if (this.currentValue == "no") {
-      this.thumbsupTarget.classList.add("d-none")
       this.thumbsdownTarget.classList.remove("d-none")
+      this.maybeTarget.classList.add("d-none")
+      this.thumbsupTarget.classList.add("d-none")
     } else {
+      this.maybeTarget.classList.remove("d-none")
       this.thumbsupTarget.classList.add("d-none")
       this.thumbsdownTarget.classList.add("d-none")
     }

@@ -24,7 +24,7 @@
 ```
 ![image](https://user-images.githubusercontent.com/71459774/158896156-2b1c8a7f-20b8-463e-b658-347a29f30e69.png)
 
-- A user can share our event with a button, the funtion is a combination beteween Ruby code and Js, the name of this is Clipboard button 
+- A user can share the event with a button, the funtion is a combination beteween Ruby code and Js.
 ```ruby
 <% if current_user&.owns?(@event) %>
       <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
@@ -52,8 +52,9 @@ export default class extends Controller {
 
 ```
 ![image](https://user-images.githubusercontent.com/71459774/159031437-d4d85c2b-dad9-4451-886f-55e5bd3917bb.png)
-
-- A user we can see how was the date voting, and for that we added a ProgresBar
+- Attendees can vote for different dates for the event in an interactive way (Using Hammer.js for swiping animations)
+![image](https://user-images.githubusercontent.com/72522628/159566185-18e47135-b0bc-4b30-9aac-6770dab94e57.png)
+- Attendees can see LIVE event updates
 ```ruby
 <div class="progress-outer">
         <div class="progress">
@@ -87,8 +88,8 @@ export default class extends Controller {
 ## Setup
 
 ```shell
- git clone git@github.com:daniel-enqz/set-the-date.git
- cd set-the-date
+ git clone git@github.com:daniel-enqz/akord.git
+ cd akord
  rails db:create db:migrate db:seed:replant
  bundle install
  yarn install

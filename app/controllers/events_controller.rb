@@ -13,6 +13,8 @@ class EventsController < ApplicationController
   # GET  /e?funid=
   def join
     @event = Event.find_by_funid!(params[:funid])
+    redirect_to new_event_date_vote_path(@event) if current_attendee.present?
+
     @attendee = Attendee.new
   end
 
@@ -24,7 +26,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
-      redirect_to event_path(@event.hashid), notice: 'event was successfully created.'
+      redirect_to event_path(@event.hashid), notice: 'Event was successfully created.'
     else
       render :new
     end
