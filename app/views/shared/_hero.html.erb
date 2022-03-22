@@ -1,13 +1,12 @@
-<h1 class="display-4 fw-bold mt-5 text-primary">Simply get TOGETHER</h1>
+<h1 class="display-4 fw-bold mt-5 text-white">Simply get TOGETHER</h1>
 <div class="col-lg-6 mx-auto">
-  <p class="lead my-5">Choosing the date for a special ocassion is now easier with the help of <strong>Akord</strong></p>
-  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5 mt-5">
     <%= link_to 'Create event', new_event_path, class: "btn btn-danger btn-lg px-4 me-sm-3"%>
-    <%= link_to 'Vote for event', join_path, class: "btn btn-outline-secondary btn-lg px-4"%>
+    <%= link_to 'Vote for event', join_path, class: "btn btn-warning btn-lg px-4"%>
   </div>
 </div>
 <div class="overflow-hidden" style="max-height: 40vh;">
   <div class="container px-5">
-    <%= image_tag "calendar.png", class: "img-fluid border rounded-3 shadow-lg mb-4", alt: "calendar", width: "700", height: "500", loading:"lazy" %>
+    <%= image_tag "calendar.png", class: "img-fluid rounded-3 shadow-lg mb-4 blurr-filter", alt: "calendar", width: "700", height: "500", loading:"lazy" %>
   </div>
 </div>

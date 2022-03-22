@@ -1,32 +1,41 @@
 <div class="container px-4 py-5" id="custom-cards">
-    <h2 class="pb-2 border-bottom fw-bold text-info">How it Works</h2>
+  <h2 class="pb-2 border-bottom fw-bold text-info text-center">How it Works</h2>
 
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg text-center" style="background-image: url('unsplash-photo-1.jpg');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-primary">Create</h2>
-            <p>Hey There</p>
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg text-center blurr-filter" style="background-image: url('unsplash-photo-1.jpg');">
+        <div class="d-flex flex-column h-100 p-2 pb-3 text-white text-shadow-1">
+          <h2 class="pt-5  mb-4 display-6 lh-1 fw-bold text-withe">Create</h2>
+          <div class="img-fluid mb-2 ">
+            <%= image_tag "create.png", class:"img-index" %>
           </div>
+          <h4>Create your event and describe its details</h4>
         </div>
       </div>
+    </div>
 
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg text-center " style="background-image: url('unsplash-photo-2.jpg');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-danger">Vote</h2>
-            <p>Hey There</p>
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg text-center blurr-filter" style="background-image: url('unsplash-photo-2.jpg');">
+        <div class="d-flex flex-column h-100 p-2 pb-3 text-white text-shadow-1">
+          <h2 class="pt-5  mb-4 display-6 lh-1 fw-bold text-withe">Vote</h2>
+          <div class="img-fluid mb-2 ">
+            <%= image_tag "Invite.png", class:"img-index" %>
           </div>
+          <h4>Share with your guests and vote for their favorite day</h4>
         </div>
       </div>
+    </div>
 
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg text-center" style="background-image: url('unsplash-photo-3.jpg');">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-success">Save the date</h2>
-            <p>Hey There</p>
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-white rounded-5 shadow-lg text-center blurr-filter" style="background-image: url('unsplash-photo-3.jpg');">
+        <div class="d-flex flex-column h-100 p-2 pb-3 text-shadow-1">
+          <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold text-withe">Save the date</h2>
+          <div class="img-fluid mb-2 ">
+            <%= image_tag "selection.png", class:"img-index" %>
           </div>
+          <h4>Select the day with the most votes</h4>
         </div>
       </div>
     </div>
   </div>
+</div>
