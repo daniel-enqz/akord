@@ -14,12 +14,12 @@
       <% if current_user&.owns?(@event) %>
         <div class="card w-100  mt-2 blurr-filter mb-3">
           <div class="card-body mb-0 text-center">
-              <div class="bg-white rounded-3 d-inline-block p-3 mb-3">
+              <div class="bg-white rounded d-inline-block p-3 mb-3">
                 <%= event_qr_code(@event).svg %>
               </div>
               <div class="d-flex justify-content-center" data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
-                <button class="btn btn-primary rounded-3" data-action="click->clipboard#copy"><i class="fas fa-link"></i> Copy</button>
-                <input class="blurr-filter border-0 rounded-3 " value="<%= short_join_event_url(@event.funid) %>" data-clipboard-target="input" type="text" readonly>
+                <button class="btn btn-primary rounded" data-action="click->clipboard#copy"><i class="fas fa-link"></i> Copy</button>
+                <input class="blurr-filter border-0 rounded " value="<%= short_join_event_url(@event.funid) %>" data-clipboard-target="input" type="text" readonly>
               </div>
           </div>
         </div>
