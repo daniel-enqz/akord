@@ -45,9 +45,11 @@
                 </div>
               </div>
               <div class="d-flex">
-              <div class="flex-shrink-1">
-                <strong><%= event_date.short_string %></strong>
-              </div>
+                <div class="flex-shrink-1 flex-column align-items-center justify-content-center py-0">
+                  <h5><%= event_date.month %></h5>
+                  <h1><strong><%= event_date.day %></strong></h1>
+                  <p class="mb-0"><%= event_date.week_day %></p>
+                </div>
                 <div class="w-100 progress-outer ">
                   <div class="progress">
                       <div class="progress-bar progress-bar-info progress-bar-striped active"
