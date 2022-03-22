@@ -9,10 +9,8 @@
 }
 
 .swipe-yes {
-  .voting-card {
-  border-width: 4px;
-  border-color: aquamarine;
-  }
+  border-width: 4px !important;
+  border-color: aquamarine !important;
 
   .icons {
     color: aquamarine;
@@ -31,8 +29,8 @@
 }
 
 .swipe-no {
-  border-width: 4px;
-  border-color: rgb(255, 127, 127);
+  border-width: 4px !important;
+  border-color: rgb(255, 127, 127) !important;
 
   .icons {
     color: rgb(255, 127, 127);
