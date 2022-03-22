@@ -12,6 +12,18 @@ class Event::Date
     value.strftime("%A, %b %d")
   end
 
+  def week_day
+    value.strftime("%A")
+  end
+
+  def month
+    value.strftime("%b")
+  end
+
+  def day
+    value.strftime("%d")
+  end
+
   def votes
     event.votes.where(date: value)
   end

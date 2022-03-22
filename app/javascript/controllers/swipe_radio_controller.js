@@ -46,6 +46,10 @@ export default class extends Controller {
     const deviation = this.initialX - this.currentX
     this.element.style.left = `${e.deltaX - deviation}px`
 
+    this.iconsTarget.classList.add("opacify")
+    this.iconsTarget.classList.remove("d-none")
+    this.#displayIcon()
+
     this.inputValueClasses.forEach((classValue) => { this.element.classList.remove(classValue) })
     this.element.classList.add(this.currentClass)
   }
@@ -66,9 +70,9 @@ export default class extends Controller {
   #panEnd(e) {
     this.element.classList.add("smooth-transition")
     this.inputTarget.value = this.inputValues[this.currentValue]
-    this.#displayIcon()
+
     this.iconsTarget.classList.add("punch-in")
-    this.iconsTarget.classList.remove("d-none")
+    this.iconsTarget.classList.remove("opacify")
 
     this.element.style.left = `${this.inputFinalPositions[this.currentValue]}px`
 
