@@ -9,7 +9,7 @@
         <% first = true %>
         <%= f.simple_fields_for :votes do |fv| %>
           <%= fv.input :date, as: :hidden %>
-          <div style="width: calc(100% - 10px)" class="<%= first ? 'jiggle' : '' %> voting-card box-shadow m-auto position-relative p-3 mb-3"  data-controller="swipe-radio">
+          <div style="width: calc(100% - 10px)" class="<%= first ? 'jiggle' : '' %> voting-card box-shadow m-auto position-relative swipe-maybe p-3 mb-3"  data-controller="swipe-radio">
             <% first = false %>
             <div class="d-flex align-items-center">
               <div class="context-clue">
@@ -23,7 +23,7 @@
                 <p><%= fv.object.event_date.week_day %></p>
               </div>
               <div class="icons" data-swipe-radio-target="icons">
-                <span class="thumbs d-none" data-swipe-radio-target="maybe"><i class="fa-regular fa-2x fa-face-meh"></i></span>
+                <span class="thumbs" data-swipe-radio-target="maybe"><%= image_tag "maybe_icon.png", alt: "maybe", width: 40, height: 40 %></span>
                 <span class="thumbs d-none" data-swipe-radio-target="thumbsup"><i class="fa-solid fa-2x fa-thumbs-up"></i></span>
                 <span class="thumbs d-none" data-swipe-radio-target="thumbsdown"><i class="fa-solid fa-2x fa-thumbs-down"></i></span>
               </div>
