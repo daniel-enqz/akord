@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.hashid %>">
   <div class="min-vh-100 row justify-content-center mx-0 ">
     <div class="col-xs-12 col-sm-8 col-sm-offset-4 col-md-6 col-lg-4">
       <div class="card w-100  mt-4 blurr-filter">
@@ -22,43 +22,21 @@
           </div>
         </div>
       <%end%>
-      <div>
+      <div data-controller="show-voting-details">
         <h2 class=" text-info text-center mt-2 mb-0">Results</strong></h2>
-        <div class="dates" data-event-subscription-target="dates">
-          <% @event.event_dates.each do |event_date| %>
-            <div data-date=<%= event_date.value %> data-controller="show-voting-details" class="mt-4">
-              <div class="d-flex justify-content-end mb-1">
-                <button class="badge btn btn-primary" data-action="click->show-voting-details#displayVoters">
-                 <span><i class="fas fa-users"></i></span>&nbsp;<span class="badge bg-primary total-display"><%= event_date.total_votes %></span>
-                </button>
-                &nbsp;<span><i class="far fa-check-circle"></i></span>&nbsp;<span class="yes-display"><%= event_date.yes_count %></span>
-                &nbsp;<span><i class="far fa-times-circle"></i></span>&nbsp;<span class="no-display"><%= event_date.no_count %></span>
-                <div class="details ms-2">
-                </div>
-              </div>
-              <div class="card d-none mt-2" data-show-voting-details-target="voters">
-                <div class="card-body">
-                  <i class="fas fa-user-friends"></i><% event_date.votes.each do |vote|%>
-                    <%= vote.attendee.name %>
-                  <% end %>
-                </div>
-              </div>
-              <div class="d-flex blurr-filter">
-                <div class="p-2 w-25 flex-column align-items-center justify-content-center ">
-                  <h5 class="mb-0"><%= event_date.month %></h5>
-                  <h1 class="mb-0"><strong><%= event_date.day %></strong></h1>
-                  <p class="mb-0"><%= event_date.week_day %></p>
-                </div>
-                <div class="w-75 progress-outer">
-                  <div class="progress">
-                      <div class="progress-bar progress-bar-info progress-bar-striped active"
-                      style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <% end %>
+        <button class="badge btn btn-primary" data-action="click->show-voting-details#displayVoters">
+          <span><i class="fas fa-users"></i></span>&nbsp;<span class="badge bg-primary total-display" data-event-subscription-target="totalDisplay"><%= @event.attendees.count %></span>
+        </button>
+        <div class="card d-none mt-2" data-show-voting-details-target="voters">
+          <div class="card-body">
+            <i class="fas fa-user-friends"></i><% @event.attendees.each do |attendee|%>
+              <%= attendee.name %>
+            <% end %>
+          </div>
         </div>
+      </div>
+      <div class="dates" data-event-subscription-target="dates">
+        <%= render @event.event_dates %>
       </div>
     </div>
   </div>

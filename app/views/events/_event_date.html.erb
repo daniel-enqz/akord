@@ -1,0 +1,21 @@
+<div data-date=<%= event_date.value %> class="mt-4">
+  <div class="d-flex justify-content-end mb-1">
+    &nbsp;<span><i class="far fa-check-circle"></i></span>&nbsp;<span class="yes-display"><%= event_date.yes_count %></span>
+    &nbsp;<span><i class="far fa-times-circle"></i></span>&nbsp;<span class="no-display"><%= event_date.no_count %></span>
+    <div class="details ms-2"></div>
+  </div>
+  <div class="d-flex blurr-filter">
+    <div class="p-2 w-25 flex-column align-items-center justify-content-center ">
+      <h5 class="mb-0"><%= event_date.month %></h5>
+      <h1 class="mb-0"><strong><%= event_date.day %></strong></h1>
+      <p class="mb-0"><%= event_date.week_day %></p>
+    </div>
+    <div class="w-75 progress-outer">
+      <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active"
+            style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -59,4 +59,8 @@ class Event::Date
       i += 1
     end
   end
+
+  def to_partial_path
+    "event_date"
+  end
 end
