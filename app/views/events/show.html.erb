@@ -1,10 +1,36 @@
 <div class="wrapper">
   <div class="container min-vh-100 d-flex justify-content-center">
     <div class="d-flex flex-column">
-
       <div class="card w-100  mt-4 blurr-filter">
-        <div class="card-body mb-0">
-          <h1 class="card-title fw-bold text-info text-center"><%= @event.title %></strong></h1>
+        <div class="card-body mb-0 text-center py-2">
+          <p class="text-white small mb-0">
+            <i class="fas fa-user-shield"></i>
+            <%= @event.user.attendee.name %>
+          </p>
+          <h1 class="card-title fw-bold text-info mb-0"><%= @event.title %></strong></h1>
+          <p class="text-white small mb-0"><%= @event.description %></p>
+        </div>
+      </div>
+      <div class="w-100  mt-2 d-flex justify-content-between">
+        <div class="card w-20 blurr-filter">
+          <div class="card-body mb-0">
+            <h1 class="mb-0 fw-bold text-info text-center"><i class="fas fa-user-shield"></i></h1>
+          </div>
+        </div>
+        <div class="card w-20 blurr-filter">
+          <div class="card-body mb-0">
+            <h1 class="mb-0 mx-1 fw-bold text-info text-center"><i class="fas fa-info-circle"></i></h1>
+          </div>
+        </div>
+        <div class="card w-20 blurr-filter">
+          <div class="card-body  mb-0">
+            <h1 class="mb-0 fw-bold text-info text-center"><i class="fas fa-link"></i></h1>
+          </div>
+        </div>
+        <div class="card w-20 blurr-filter">
+          <div class="card-body mb-0">
+            <h1 class="mb-0 mx-1  fw-bold text-primary text-info"><i class="fas fa-qrcode"></i></h1>
+          </div>
         </div>
       </div>
       <div class="card w-100  mt-2 blurr-filter">
@@ -21,7 +47,6 @@
         </div>
         </div>
       </div>
-
       <div class="container">
         <br>
         <hr>
@@ -31,7 +56,7 @@
               <div class="d-flex">
                 <strong><%= event_date.short_string %></strong>
                 <button class="badge btn btn-primary" data-action="click->show-voting-details#displayVoters">
-                  Voters <span class="badge bg-secondary total-display"><%= event_date.total_votes %></span>
+                 <span><i class="fas fa-users"></i></span>&nbsp;<span class="badge bg-primary total-display"><%= event_date.total_votes %></span>
                 </button>
                 &nbsp;<span><i class="far fa-check-circle"></i></span>&nbsp;<span class="yes-display"><%= event_date.yes_count %></span>
                 &nbsp;<span><i class="far fa-times-circle"></i></span>&nbsp;<span class="no-display"><%= event_date.no_count %></span>
