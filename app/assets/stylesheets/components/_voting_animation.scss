@@ -5,6 +5,21 @@
   100% { opacity: 0; transform: translateY(-20px); }
 }
 
+// JIGGLE ANIMATION
+@keyframes jiggle {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-2.5rem); }
+  66% { transform: translateX(2.5rem); }
+  100% { transform: translateX(0); }
+}
+
+.jiggle {
+  animation-name: jiggle;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
 .slide-up {
   animation-name: slideUp;
   animation-duration: 1s;
