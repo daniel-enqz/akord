@@ -1,37 +1,41 @@
-<div class="overflow-hidden">
-  <div class="container-sm">
-    <div class="d-flex flex-column m-5">
-      <h4  class="fw-bold text-primary">Hey <%= current_attendee.name.capitalize %>! you are invited to <%= @date_votes.event.title %> </h4>
-      <p><%= @date_votes.event.description %></p>
-      <h5>We are trying to <strong class="fw-bold text-danger">Akord</strong> on a date for <%= @date_votes.event.title %></h5>
-      <h5 class="border-bottom fw-bold text-primary">Your vote helps!</h5>
-      <%= simple_form_for @date_votes, url: event_date_votes_path do |f| %>
-        <% first = true %>
-        <%= f.simple_fields_for :votes do |fv| %>
-          <%= fv.input :date, as: :hidden %>
-          <div style="width: calc(100% - 10px)" class="<%= first ? 'jiggle' : '' %> voting-card box-shadow m-auto position-relative swipe-maybe p-3 mb-3"  data-controller="swipe-radio">
-            <% first = false %>
-            <div class="d-flex align-items-center">
-              <div class="context-clue">
-                <%= icon "fa", "caret-left" %>
-                <%= icon "fa", "caret-right" %>
-              </div>
-              <%= fv.input :rate, as: :hidden, input_html: { data: { swipe_radio_target: :input } } %>
-              <div class="d-flex flex-column align-items-center justify-content-center ms-4">
-                <h5><%= fv.object.event_date.month %></h5>
-                <h1><strong><%= fv.object.event_date.day %></strong></h1>
-                <p><%= fv.object.event_date.week_day %></p>
-              </div>
-              <div class="icons" data-swipe-radio-target="icons">
-                <span class="thumbs" data-swipe-radio-target="maybe"><%= image_tag "maybe_icon.png", alt: "maybe", width: 40, height: 40 %></span>
-                <span class="thumbs d-none" data-swipe-radio-target="thumbsup"><i class="fa-solid fa-2x fa-thumbs-up"></i></span>
-                <span class="thumbs d-none" data-swipe-radio-target="thumbsdown"><i class="fa-solid fa-2x fa-thumbs-down"></i></span>
+<div class="wrapper">
+  <div class="overflow-hidden">
+    <div class="container-sm">
+      <div class="d-flex flex-column m-5">
+        <div class="card effect-3d blurr-filter p-3">
+          <h4  class="fw-bold text-primary text-white">Hey <%= current_attendee.name.capitalize %>! you are invited to <%= @date_votes.event.title %> </h4>
+          <p><%= @date_votes.event.description %></p>
+          <h5 class="text-white">We are trying to <strong class="fw-bold text-danger">Akord</strong> on a date for <%= @date_votes.event.title %></h5>
+          <%# <h5 class="border-bottom fw-bold text-primary">Your vote helps!</h5> %>
+        </div>
+        <%= simple_form_for @date_votes, url: event_date_votes_path do |f| %>
+          <% first = true %>
+          <%= f.simple_fields_for :votes do |fv| %>
+            <%= fv.input :date, as: :hidden %>
+            <div style="width: calc(100% - 10px)" class="<%= first ? 'jiggle' : '' %> voting-card effect-3d box-shadow m-auto position-relative swipe-maybe p-3 mb-3"  data-controller="swipe-radio">
+              <% first = false %>
+              <div class="d-flex align-items-center">
+                <div class="context-clue">
+                  <%= icon "fa", "caret-left" %>
+                  <%= icon "fa", "caret-right" %>
+                </div>
+                <%= fv.input :rate, as: :hidden, input_html: { data: { swipe_radio_target: :input } } %>
+                <div class="d-flex flex-column align-items-center justify-content-center ms-4">
+                  <h5 class="mb-0"><%= fv.object.event_date.month %></h5>
+                  <h1 class="mb-0"><strong><%= fv.object.event_date.day %></strong></h1>
+                  <p class="mb-0"><%= fv.object.event_date.week_day %></p>
+                </div>
+                <div class="icons" data-swipe-radio-target="icons">
+                  <span class="thumbs" data-swipe-radio-target="maybe"><%= image_tag "maybe_icon.png", alt: "maybe", width: 40, height: 40 %></span>
+                  <span class="thumbs d-none" data-swipe-radio-target="thumbsup"><i class="fa-solid fa-2x fa-thumbs-up"></i></span>
+                  <span class="thumbs d-none" data-swipe-radio-target="thumbsdown"><i class="fa-solid fa-2x fa-thumbs-down"></i></span>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
+          <%= f.button :submit, class:"voting-button voting-button-animation", value: "VOTE!" %>
         <% end %>
-        <%= f.button :submit, class:"voting-button voting-button-animation", value: "VOTE!" %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>
