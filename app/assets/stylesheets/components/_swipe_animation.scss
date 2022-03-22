@@ -8,15 +8,9 @@
   border-color: black !important;
 }
 
-.swipe-yes {
-  .voting-card {
-  border-width: 4px;
-  border-color: aquamarine;
-  }
-
+.voting-card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   .icons {
-    color: aquamarine;
-    border: 4px aquamarine dashed;
     border-radius: 50%;
     height: 3.5rem;
     width: 3.5rem;
@@ -27,25 +21,33 @@
     justify-content: center;
     padding: 1rem;
     margin-right: 2rem;
+    border-width: 4px;
+    border-style: dashed;
+    border-color: rgb(95, 95, 93);
+    filter: grayscale(100%)
+  }
+}
+
+.swipe-yes {
+  .icons {
+    color: aquamarine;
+    border-color: aquamarine;
+    filter: none;
   }
 }
 
 .swipe-no {
-  border-width: 4px;
-  border-color: rgb(255, 127, 127);
-
+  // border-width: 4px !important;
+  // border-color: rgb(255, 127, 127) !important;
   .icons {
     color: rgb(255, 127, 127);
-    border: 4px rgb(255, 127, 127) dashed;
-    border-radius: 50%;
-    height: 3.5rem;
-    width: 3.5rem;
-    position: absolute;
-    right: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    margin-right: 2rem;
+    border-color: rgb(255, 127, 127);
+    filter: none;
   }
 }
+
+// .swipe-maybe {
+//   .icons {
+//     font-size: 2rem;
+//   }
+// }
