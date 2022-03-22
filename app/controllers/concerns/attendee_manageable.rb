@@ -8,7 +8,7 @@ module AttendeeManageable
   private
 
   def current_attendee
-    @current_attendee ||= Attendee.find_by(id: session[:attendee_id])
+    @current_attendee ||= (current_user&.attendee || Attendee.find_by(id: session[:attendee_id]))
   end
 
   def assign_session_attendee(attendee)
