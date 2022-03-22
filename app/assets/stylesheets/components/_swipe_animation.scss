@@ -9,9 +9,6 @@
 }
 
 .swipe-yes {
-  border-width: 4px !important;
-  border-color: aquamarine !important;
-
   .icons {
     color: aquamarine;
     border: 4px aquamarine dashed;
@@ -29,12 +26,29 @@
 }
 
 .swipe-no {
-  border-width: 4px !important;
-  border-color: rgb(255, 127, 127) !important;
+  // border-width: 4px !important;
+  // border-color: rgb(255, 127, 127) !important;
 
   .icons {
     color: rgb(255, 127, 127);
     border: 4px rgb(255, 127, 127) dashed;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-right: 2rem;
+  }
+}
+
+.swipe-maybe {
+  .icons {
+    color: rgb(11, 226, 241);
+    border: 4px rgb(11, 226, 241) dashed;
     border-radius: 50%;
     height: 3.5rem;
     width: 3.5rem;

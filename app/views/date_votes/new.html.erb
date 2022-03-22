@@ -9,26 +9,27 @@
         <% first = true %>
         <%= f.simple_fields_for :votes do |fv| %>
           <%= fv.input :date, as: :hidden %>
-            <div style="width: calc(100% - 10px)" class="<%= first ? 'jiggle' : '' %> voting-card box-shadow m-auto position-relative p-3 mb-3"  data-controller="swipe-radio">
-              <% first = false %>
-              <div class="d-flex align-items-center">
-                <div class="context-clue">
-                  <%= icon "fa", "caret-left" %>
-                  <%= icon "fa", "caret-right" %>
-                </div>
-                <%= fv.input :rate, as: :hidden, input_html: { data: { swipe_radio_target: :input } } %>
-                <div class="d-flex flex-column align-items-center justify-content-center ms-4">
-                  <h5><%= fv.object.event_date.month %></h5>
-                  <h1><strong><%= fv.object.event_date.day %></strong></h1>
-                  <p><%= fv.object.event_date.week_day %></p>
-                </div>
-                <div class="icons" data-swipe-radio-target="icons" >
-                  <span class="thumbs d-none" data-swipe-radio-target="thumbsup"><i class="fa-solid fa-2x fa-thumbs-up"></i></span>
-                  <span class="thumbs d-none" data-swipe-radio-target="thumbsdown"><i class="fa-solid fa-2x fa-thumbs-down"></i></span>
-                </div>
+          <div style="width: calc(100% - 10px)" class="<%= first ? 'jiggle' : '' %> voting-card box-shadow m-auto position-relative p-3 mb-3"  data-controller="swipe-radio">
+            <% first = false %>
+            <div class="d-flex align-items-center">
+              <div class="context-clue">
+                <%= icon "fa", "caret-left" %>
+                <%= icon "fa", "caret-right" %>
+              </div>
+              <%= fv.input :rate, as: :hidden, input_html: { data: { swipe_radio_target: :input } } %>
+              <div class="d-flex flex-column align-items-center justify-content-center ms-4">
+                <h5><%= fv.object.event_date.month %></h5>
+                <h1><strong><%= fv.object.event_date.day %></strong></h1>
+                <p><%= fv.object.event_date.week_day %></p>
+              </div>
+              <div class="icons" data-swipe-radio-target="icons">
+                <span class="thumbs d-none" data-swipe-radio-target="maybe"><i class="fa-regular fa-2x fa-face-meh"></i></span>
+                <span class="thumbs d-none" data-swipe-radio-target="thumbsup"><i class="fa-solid fa-2x fa-thumbs-up"></i></span>
+                <span class="thumbs d-none" data-swipe-radio-target="thumbsdown"><i class="fa-solid fa-2x fa-thumbs-down"></i></span>
               </div>
             </div>
-          <% end %>
+          </div>
+        <% end %>
         <%= f.button :submit, class:"voting-button voting-button-animation", value: "VOTE!" %>
       <% end %>
     </div>
