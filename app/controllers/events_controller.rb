@@ -13,11 +13,9 @@ class EventsController < ApplicationController
   # GET  /e?funid=
   def join
     @event = Event.find_by_funid!(params[:funid])
-    if current_attendee.nil?
-      @attendee = Attendee.new
-    else
-      redirect_to @event, alert: "You already voted!"
-    end
+    redirect_to new_event_date_vote_path(@event) if current_attendee.present?
+
+    @attendee = Attendee.new
   end
 
   def new
