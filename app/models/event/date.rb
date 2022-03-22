@@ -9,11 +9,11 @@ class Event::Date
 
   # Example of things the view might need
   def short_string
-    value.strftime("%A, %b %d")
+    value.strftime("%a, %b %d")
   end
 
   def week_day
-    value.strftime("%A")
+    value.strftime("%a")
   end
 
   def month
