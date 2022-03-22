@@ -29,6 +29,7 @@ export default class extends Controller {
     return {
       noDisplay: element.querySelector(".no-display"),
       yesDisplay: element.querySelector(".yes-display"),
+      maybeDisplay: element.querySelector(".maybe-display"),
       progressBar: element.querySelector(".progress-bar")
     }
   }
