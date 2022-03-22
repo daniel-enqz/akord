@@ -12,10 +12,10 @@
         <p class="mb-0 small text-muted"><%= event_date.week_day %></p>
       </div>
     </div>
-    <div class="flex-grow-1 p-4 bg-white rounded-pill">
+    <div class="flex-grow-1 p-4 ">
       <div class="progress">
         <div class="progress-bar progress-bar-info progress-bar-striped active"
-            style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);">
+            style="width: <%= event_date.progress_bar_value %>% "> <%# box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7); %>
         </div>
       </div>
     </div>
