@@ -7,7 +7,7 @@ export default class extends Controller {
 
   connect() {
     this.initialX = this.element.getBoundingClientRect().x
-    this.threshold = 50
+    this.threshold = 100
     this.inputValues = { yes: 1, no: -1, maybe: 0 }
     this.inputFinalPositions = { yes: 50, no: -50, maybe: 0 }
     this.inputValueClasses = ["swipe-no", "swipe-maybe", "swipe-yes"]
