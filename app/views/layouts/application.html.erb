@@ -18,9 +18,11 @@
   </head>
 
   <body class= "site">
-    <main class= site-content>
-      <%= render 'shared/flashes' %>
-      <%= yield %>
-    </main>
+    <div class="wrapper">
+      <main class= site-content>
+        <%= render 'shared/flashes' %>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>
