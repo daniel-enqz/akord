@@ -12,7 +12,7 @@
         </div>
       </div>
       <% if current_user&.owns?(@event) %>
-        <div class="card w-100  mt-2 blurr-filter">
+        <div class="card w-100  mt-2 blurr-filter mb-3">
           <div class="card-body mb-0">
               <div class="text-center mb-3"><i class="fas fa-qrcode text-white fa-10x"></i></div>
               <div class="d-flex" data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
@@ -22,10 +22,10 @@
           </div>
         </div>
       <%end%>
-      <div data-controller="show-voting-details">
-        <h2 class=" text-info text-center mt-2 mb-0">Results</strong></h2>
-        <button class="badge btn btn-primary" data-action="click->show-voting-details#displayVoters">
-          <span><i class="fas fa-users"></i></span>&nbsp;<span class="badge bg-primary total-display" data-event-subscription-target="totalDisplay"><%= @event.attendees.count %></span>
+      <div class="d-flex justify-content-between align-items-end mb-2" data-controller="show-voting-details">
+        <h2 class="text-info mt-2 mb-0">Results</strong></h2>
+        <button class="d-inline-flex align-items-center btn btn-light badge" data-action="click->show-voting-details#displayVoters" >
+          <span><i class="fas text-primary fa-users"></i></span>&nbsp;<span class="badge bg-primary total-display" data-event-subscription-target="totalDisplay"><%= @event.attendees.count %></span>
         </button>
         <div class="card d-none mt-2" data-show-voting-details-target="voters">
           <div class="card-body">
