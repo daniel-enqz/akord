@@ -20,10 +20,12 @@
                   <%= icon "fa", "caret-right" %>
                 </div>
                 <%= fv.input :rate, as: :hidden, input_html: { data: { swipe_radio_target: :input } } %>
-                <div class="d-flex flex-column align-items-center justify-content-center ms-2">
-                  <h5 class="mb-0"><%= fv.object.event_date.month %></h5>
-                  <h1 class="mb-0"><strong><%= fv.object.event_date.day %></strong></h1>
-                  <p class="mb-0"><%= fv.object.event_date.week_day %></p>
+                <div class="p-2 align-items-center d-flex justify-content-between">
+                  <p class="day_date mb-0"><strong><%= fv.object.event_date.day %></strong></p>
+                  <div>
+                    <h5 class="mb-0"><%= fv.object.event_date.month %></h5>
+                    <p class="mb-0 small text-muted"><%= fv.object.event_date.week_day %></p>
+                  </div>
                 </div>
                 <div class="icons" data-swipe-radio-target="icons">
                   <span class="thumbs" data-swipe-radio-target="maybe"><%= image_tag "maybe_icon.png", alt: "maybe", width: 40, height: 40 %></span>

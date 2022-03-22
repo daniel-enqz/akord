@@ -3,6 +3,7 @@ class Event < ApplicationRecord
 
   belongs_to :user
   has_many :votes
+  has_many :attendees, -> { distinct }, through: :votes
 
   before_create :set_funid_pin
 
