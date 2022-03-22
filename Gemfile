@@ -23,6 +23,7 @@ gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 gem "hashid-rails", "~> 1.0"
 # Use Active Storage variant
+gem 'rqrcode'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb

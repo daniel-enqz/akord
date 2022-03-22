@@ -52,6 +52,5 @@ class Event < ApplicationRecord
 
   def any_past_dates?
     votable_dates.any? { |date| date < ::Date.current }
-
   end
 end
