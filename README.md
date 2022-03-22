@@ -87,8 +87,8 @@ export default class extends Controller {
 ## Setup
 
 ```shell
- git clone git@github.com:daniel-enqz/set-the-date.git
- cd set-the-date
+ git clone git@github.com:daniel-enqz/akord.git
+ cd akord
  rails db:create db:migrate db:seed:replant
  bundle install
  yarn install
