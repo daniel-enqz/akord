@@ -1,12 +1,17 @@
 <div class="wrapper">
   <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center">
-    <div class= col-sm-6>
+    <div class= "col-sm-6 ">
       <%= image_tag "akord.png", height: 200, class: "img-fluid" %>
       <div class="justify-content-center">
         <div class="card form-login blurr-filter m-1 text-center">
-          <h3>Congratulations!</h3>
-          <div class="container d-flex justify-content-center m-1">
-            <%# card %>
+          <h3 class="fw-bold">All votes are in!</h3>
+          <p class=" mb-1"><strong><%= @event.title.capitalize %></strong> will be on:</p>
+          <div>
+            <div class="d-inline-flex flex-column m-1 rounded overflow-hidden">
+              <div class="px-4 py-1 h3  text-info bg-primary mb-0 "><%= @event.chosen_date.month%></div>
+              <div class="px-4 py-1 bg-info chosen-day mb-0 fw-bold"><%=@event.chosen_date.day%></div>
+              <div class=" bg-secondary text-info mb-0"><%=@event.chosen_date.week_day%></div>
+            </div>
           </div>
         </div>
       </div>
