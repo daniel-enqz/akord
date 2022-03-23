@@ -26,3 +26,8 @@
 #     end
 #   end
 # end
+
+# GENERATE SINGLE USER
+default_password = "123456"
+puts "Creating User....."
+User.create!(email: "pablo@user.com", password: default_password)
