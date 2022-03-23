@@ -10,13 +10,13 @@
         <div class="card-body text-primary">
           <%= simple_form_for @event do |f| %>
             <div class="form-inputs text-white">
-              <%= f.input :title, placeholder:"E.g.: Pizza Day!", input_html: { class: "border-radius blurr-filter border-0" } %>
+              <%= f.input :title, placeholder:"E.g.: Pizza Day!", input_html: { class: "border-radius blurr-filter border-0" }, error: 'Your event needs a title😯' %>
               <%= f.input :description, input_html: { class: "border-radius blurr-filter border-0" } %>
               <%= f.input :votable_dates_strings, label: "Choose possible dates", as: :string, input_html: { data: { controller: "pick-days" } }, wrapper_html: { class: "flatpickr-calendar-custom" } %>
             </div>
             <div class="form-actions">
-              <%= link_to "Cancel", root_path, class:"btn btn-secondary" %>
-              <%= f.button :submit, class:"btn btn-danger ms-3" %>
+              <%= link_to "Cancel", root_path, class:"btn btn-secondary border-radius text-white fw-bold" %>
+              <%= f.button :submit, class:"btn btn-danger ms-3  border-radius text-white fw-bold" %>
             </div>
           <% end %>
         </div>
