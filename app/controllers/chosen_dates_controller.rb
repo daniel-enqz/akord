@@ -2,7 +2,10 @@ class ChosenDatesController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
     @event.update(chosen_date: params[:date_string])
+    redirect_to event_chosen_date_path(@event)
+  end
 
-    redirect_to @event
+  def show
+    @event = Event.find(params[:event_id])
   end
 end

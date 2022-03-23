@@ -7,12 +7,12 @@
           <h3>
             Joining <%= @event.title %>
           </h3>
-            <div class="container d-flex justify-content-center m-1">
-              <%= simple_form_for [@event, @attendee] do |f| %>
-              <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John", input_html: { class: "blurr-filter border-0" } %>
-              <%= f.button :submit, value:"Join", class:"button-radius btn btn-danger" %>
-              <% end %>
-            </div>
+          <div class="container d-flex justify-content-center m-1">
+            <%= simple_form_for [@event, @attendee] do |f| %>
+            <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John", input_html: { class: "blurr-filter border-0" } %>
+            <%= f.button :submit, value:"Join", class:"button-radius btn btn-danger" %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
