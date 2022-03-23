@@ -14,7 +14,7 @@
       <% if current_user&.owns?(@event) %>
         <div class="card w-100  mt-2 blurr-filter mb-3">
           <div class="card-body mb-0 text-center">
-              <div class="bg-white rounded d-inline-block p-3 mb-3">
+              <div class="border-radius bg-white d-inline-block p-3 mb-3">
                 <%= event_qr_code(@event).svg %>
               </div>
               <div class="d-flex justify-content-center" data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
