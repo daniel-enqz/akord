@@ -26,8 +26,6 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
-      # VotesJob.perform_now(@event)
-      VotesJob.set(wait: 5.seconds).perform_later(@event)
       redirect_to event_path(@event.hashid), notice: 'Event was successfully created.'
     else
       render :new

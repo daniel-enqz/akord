@@ -3,18 +3,24 @@ class VotesJob < ApplicationJob
   queue_as :default
 
   def perform(event)
-    # valid_rates = Vote.rates.keys
-    valid_rates = [
-      ['yes', 3],
-      ['no', 1],
-      ['yes', 1]
-    ]
+    valid_rates = %i[yes yes yes yes yes maybe maybe no no no]
 
     10.times do
-      event.votes.create!(
-        date: event.votable_dates.sample,
-        rate: valid_rates.sample,
-        attendee: Attendee.new(name: Faker::Name.name)
+      sleep rand(0.5..1.5)
+      attendee = Attendee.create(name: Faker::Name.name)
+      first_vote = true
+      votes = event.votable_dates.map do |votable_date|
+        vote_rate = first_vote ? :yes : valid_rates.sample
+        first_vote = false
+        event.votes.create!(
+          date: votable_date,
+          rate: vote_rate,
+          attendee: attendee
+        )
+      end
+      EventChannel.broadcast_to(
+        event,
+        votes.as_json(only: [:date, :rate])
       )
     end
   end
