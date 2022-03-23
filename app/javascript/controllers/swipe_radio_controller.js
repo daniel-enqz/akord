@@ -47,7 +47,7 @@ export default class extends Controller {
     const deviation = this.initialX - this.currentX
     const posX = e.deltaX - deviation
     const isPositive = posX > 0
-    const absoluteX = Math.min(Math.abs(posX), this.limit)
+    const absoluteX = Math.min(Math.abs(posX), (this.limit + ((Math.abs(posX) - this.limit) / 10)))
     this.element.style.left = `${isPositive ? absoluteX : -absoluteX}px`
 
     this.iconsTarget.classList.add("opacify")
