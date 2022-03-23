@@ -30,6 +30,4 @@
 # GENERATE SINGLE USER
 default_password = "123456"
 puts "Creating User pablo@user.com with default password....."
-print ">"
-gets.chomp
 User.create!(email: "pablo@user.com", password: default_password)
