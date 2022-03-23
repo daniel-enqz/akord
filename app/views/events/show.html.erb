@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@event.user.attende.name} event is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @event.description %>
+<%# <% content_for :meta_image, cl_image_path(@offer.photo.path) %> %>
+
 <div class="wrapper" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.hashid %>">
   <div class="min-vh-100 row justify-content-center mx-0 ">
     <div class="col-xs-12 col-sm-8 col-sm-offset-4 col-md-6 col-lg-4">
