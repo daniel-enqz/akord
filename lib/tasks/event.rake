@@ -4,5 +4,4 @@ namespace :event do
     # VotesJob.set(wait: 5.seconds).perform_later(@event)
     VotesJob.perform_now(Event.last)
   end
-
 end
