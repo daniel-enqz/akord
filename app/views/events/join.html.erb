@@ -9,8 +9,8 @@
           </h3>
             <div class="container d-flex justify-content-center m-1">
               <%= simple_form_for [@event, @attendee] do |f| %>
-              <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John", input_html: { class: "blurr-filter border-0" } %>
-              <%= f.button :submit, value:"Join", class:"button-radius btn btn-danger" %>
+                <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John", input_html: { class: "blurr-filter border-0" } %>
+                <%= f.button :submit, value:"Join", class:"button-radius btn btn-danger border-radius fw-bold text-white w-100 ms-0" %>
               <% end %>
             </div>
         </div>
