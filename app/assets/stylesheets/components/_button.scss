@@ -42,6 +42,6 @@
   float: right;
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
   &:hover {
-    box-shadow: 0 0 40px 40px $success inset;
+    box-shadow: 0 0 40px 40px $danger inset;
   }
 }
