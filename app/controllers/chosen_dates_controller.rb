@@ -1,0 +1,2 @@
+class ChosenDatesController < ApplicationController
+end
