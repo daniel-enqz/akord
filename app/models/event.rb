@@ -24,7 +24,7 @@ class Event < ApplicationRecord
   end
 
   def chosen_date
-    Event::Date.new(super.to_s, self)
+    super.blank? ? nil : Event::Date.new(super.to_s, self)
   end
 
   # Might help with flatpick values if they are JSON

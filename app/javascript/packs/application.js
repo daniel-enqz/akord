@@ -7,6 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import '../plugins/init_sweetalert';
 
 Rails.start()
 Turbolinks.start()
@@ -14,14 +15,6 @@ ActiveStorage.start()
 
 import "controllers"
 import * as bootstrap from "bootstrap"
-
-import { initSweetalert } from '../plugins/init_sweetalert';
-
-initSweetalert('#sweet-alert-demo', {
-  title: "A nice alert",
-  text: "hey",
-  icon: "success"
-});
 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
