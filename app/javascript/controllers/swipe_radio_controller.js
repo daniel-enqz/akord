@@ -7,7 +7,8 @@ export default class extends Controller {
 
   connect() {
     this.initialX = this.element.getBoundingClientRect().x
-    this.threshold = 100
+    this.threshold = 50
+    this.limit = this.threshold * 1.25
     this.inputValues = { yes: 1, no: -1, maybe: 0 }
     this.inputFinalPositions = { yes: 50, no: -50, maybe: 0 }
     this.inputValueClasses = ["swipe-no", "swipe-maybe", "swipe-yes"]
@@ -44,7 +45,10 @@ export default class extends Controller {
 
   #panMove(e) {
     const deviation = this.initialX - this.currentX
-    this.element.style.left = `${e.deltaX - deviation}px`
+    const posX = e.deltaX - deviation
+    const isPositive = posX > 0
+    const absoluteX = Math.min(Math.abs(posX), (this.limit + ((Math.abs(posX) - this.limit) / 10)))
+    this.element.style.left = `${isPositive ? absoluteX : -absoluteX}px`
 
     this.iconsTarget.classList.add("opacify")
     this.iconsTarget.classList.remove("d-none")

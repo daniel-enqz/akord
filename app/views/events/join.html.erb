@@ -3,16 +3,16 @@
     <div class= col-sm-6>
       <%= image_tag "akord.png", height: 200, class: "img-fluid" %>
       <div class="justify-content-center">
-        <div class="card effect-3d form-login blurr-filter m-1 text-center">
+        <div class="card form-login blurr-filter m-1 text-center">
           <h3>
             Joining <%= @event.title %>
           </h3>
-          <div class="container d-flex justify-content-center m-1">
-            <%= simple_form_for [@event, @attendee] do |f| %>
-            <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John", input_html: { class: "blurr-filter border-0" } %>
-            <%= f.button :submit, value:"Join", class:"button-radius btn btn-danger" %>
-            <% end %>
-          </div>
+            <div class="container d-flex justify-content-center m-1">
+              <%= simple_form_for [@event, @attendee] do |f| %>
+                <%= f.input :name, label: "Who are you?", placeholder:"E.g.: Uncle John", input_html: { class: "blurr-filter border-0" }, error: "Hmm, seems that a name is missing here🤔" %>
+                <%= f.button :submit, value:"Join", class:"button-radius btn btn-danger border-radius fw-bold text-white w-100 ms-0" %>
+              <% end %>
+            </div>
         </div>
       </div>
     </div>

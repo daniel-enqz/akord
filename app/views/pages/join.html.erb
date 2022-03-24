@@ -9,8 +9,8 @@
               <%# ?join={funid:kind-memory} %>
               <div class="container d-flex justify-content-center m-1">
                 <%= label_tag :funid, " " %>
-                <%= text_field_tag :funid, nil, placeholder:"Event-code", class: "blurr-filter border-0 form-control" %>
-                <%= f.button :submit, value:"Join", class:"button-radius btn btn-danger" %>
+                <%= text_field_tag :funid, nil, placeholder:"Event-code", class: "blurr-filter border-0 form-control", error: "This event does not exist👻"  %>
+                <%= f.button :submit, value:"Join", class:"button-radius text-white btn btn-danger" %>
               </div>
             <% end %>
           </div>
