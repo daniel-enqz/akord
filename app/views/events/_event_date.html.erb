@@ -1,7 +1,7 @@
 <% if event_date.chosen? %>
-  <%# <%= icon("fa", "check", class: "p-2 bg-primary rounded-circle text-white") %>
+  <%# render modal page %>
 <% end %>
-<%= link_to "Chose", event_chosen_date_path(event_date.event, date_string: event_date.value), data: {confirm: "You are choosing #{event_date.week_day}, #{event_date.month} #{event_date.day} as the winner date... Correct?"}, method: :post %>
+<%= link_to "Chose", event_chosen_date_path(event_date.event, date_string: event_date.value), id: "sweet-alert-demo", method: :post %>
 <div data-date=<%= event_date.value %> class="mb-2">
   <div class="d-flex blurr-filter px-3 <%= event_date.chosen? ? "border border-3 border-primary" : "" %>">
     <div class="pe-3 align-items-center d-flex justify-content-between ">
