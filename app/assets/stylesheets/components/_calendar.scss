@@ -17,4 +17,14 @@
     border-color: #e8e8e9;
     color: black;
   }
+  .flatpickr-day.today:hover, .flatpickr-day.today:focus {
+    background: #5D5FEF;
+    color: rgb(255, 255, 255);
+  }
+  span.flatpickr-day.today:not(.selected):hover, span.flatpickr-day.prevMonthDay.today:not(.selected):hover, span.flatpickr-day.nextMonthDay.today:not(.selected):hover {
+    border: 1px solid #ffffff;
+  }
+  span.flatpickr-day.today:not(.selected){
+    border-color: #e8e8e9;
+  }
 }
