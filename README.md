@@ -22,8 +22,7 @@
     votable_dates.any? { |date| date < ::Date.current }
   end
 ```
-![image](https://user-images.githubusercontent.com/71459774/158896156-2b1c8a7f-20b8-463e-b658-347a29f30e69.png)
-
+![image](https://user-images.githubusercontent.com/71459774/160004122-2b7d312b-205d-4f1e-9600-ef0207de8b1b.png)
 - A user can share the event with a button, the funtion is a combination beteween Ruby code and Js.
 ```ruby
 <% if current_user&.owns?(@event) %>
