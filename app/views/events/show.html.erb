@@ -14,25 +14,19 @@
           <p class="text-white small mb-0"><%= @event.description %></p>
         </div>
       </div>
-      <% if current_user&.owns?(@event) %>
-        <div class="card w-100  mt-2 blurr-filter mb-3">
-          <div class="card-body mb-0 text-center">
-              <div class="border-radius bg-white d-inline-block p-3 mb-3">
-                <%= event_qr_code(@event).svg %>
-              </div>
-              <div class="d-flex justify-content-center" data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
-                <button class="btn btn-secondary rounded" data-action="click->clipboard#copy"><i class="fas fa-link"></i> Copy</button>
-                <input class="blurr-filter border-0 rounded " value="<%= short_join_event_url(@event.funid) %>" data-clipboard-target="input" type="text" readonly>
-              </div>
-          </div>
+      <% if @event.closed? %>
+        <div class="d-flex flex-column align-items-center">
+         <%= link_to "view winner date", event_chosen_date_path(@event), class: "btn btn-primary fw-bold" %>
+          <%# <%= render "chosen_dates/modal" %>
         </div>
+      <% else %>
+        <%= render "invitation_links" %>
       <%end%>
       <div class="d-flex justify-content-between align-items-end mb-2" >
         <h2 class="text-info mt-2 mb-0">Results</strong></h2>
-        <button class="d-inline-flex align-items-center btn btn-light badge"  data-bs-toggle="tooltip" data-bs-placement="top" title="<%= @event.attendees.pluck(:name).to_sentence %>">  <%# data-action="click->show-voting-details#displayVoters" %>
+        <button class="d-inline-flex align-items-center btn btn-light badge"  data-bs-toggle="tooltip" data-bs-placement="top" title="<%= @event.attendees.pluck(:name).to_sentence %>">
           <span><i class="fas text-secondary fa-users"></i></span>&nbsp;<span class="badge btn-secondary total-display" data-event-subscription-target="totalDisplay"><%= @event.attendees.count %></span>
         </button>
-
       </div>
       <div class="dates" data-event-subscription-target="dates">
         <%= render @event.event_dates %>
