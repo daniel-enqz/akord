@@ -63,7 +63,7 @@ export default class extends Controller {
         </div>
       </div>
 ```
-![image](https://user-images.githubusercontent.com/71459774/159033563-f9e80f61-0033-4c32-ae0b-aba1d8f0fe4e.png)
+![image](https://user-images.githubusercontent.com/71459774/160003562-55132dcf-7d98-4d18-9618-f4fdb5047411.png)
 
 
 ## APP DB SCHEMA
