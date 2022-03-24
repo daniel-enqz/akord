@@ -2,9 +2,9 @@
   <div class="overflow-hidden">
     <div class="container pt-5">
       <div class="card blurr-filter p-3 ">
-        <h4  class="fw-bold text-primary text-white">Hey <%= current_attendee.name.capitalize %>! you are invited to <%= @date_votes.event.title %> </h4>
-        <p><%= @date_votes.event.description %></p>
-        <h5 class="text-white">We are trying to <b>Akord</b> on a date for <%= @date_votes.event.title %></h5>
+        <h4  class="fw-bold text-white">Hey <%= current_attendee.name.capitalize %>! you are invited to <%= @date_votes.event.title.capitalize %> </h4>
+        <p class="text-white"><%= @date_votes.event.description %></p>
+        <h4 class="text-white">Let's <b>Akord</b> on a date for this event</h4>
         <%# <h5 class="border-bottom fw-bold text-primary">Your vote helps!</h5> %>
       </div>
       <div class="d-flex flex-column m-5 mt-2">
