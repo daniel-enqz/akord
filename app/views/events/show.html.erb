@@ -1,6 +1,5 @@
 <% content_for :meta_title, "#{DEFAULT_META["meta_product_name"]} on #{@event.title}" %>
 <% content_for :meta_description, @event.description %>
-<%# <% content_for :meta_image, cl_image_path(@offer.photo.path) %>
 
 <div class="wrapper" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.hashid %>">
   <div class="min-vh-100 row justify-content-center mx-0 ">
@@ -28,18 +27,12 @@
           </div>
         </div>
       <%end%>
-      <div class="d-flex justify-content-between align-items-end mb-2" >  <%# data-controller="show-voting-details" %>
+      <div class="d-flex justify-content-between align-items-end mb-2" >
         <h2 class="text-info mt-2 mb-0">Results</strong></h2>
-        <button class="d-inline-flex align-items-center btn btn-light badge"  data-bs-toggle="tooltip" data-bs-placement="top" title="<%= @event.attendees.pluck(:name).to_sentence %>">  <%# data-action="click->show-voting-details#displayVoters" %>
+        <button class="d-inline-flex align-items-center btn btn-light badge"  data-bs-toggle="tooltip" data-bs-placement="top" title="<%= @event.attendees.pluck(:name).to_sentence %>">
           <span><i class="fas text-primary fa-users"></i></span>&nbsp;<span class="badge bg-primary total-display" data-event-subscription-target="totalDisplay"><%= @event.attendees.count %></span>
         </button>
-        <%# <div class="card d-none mt-2" data-show-voting-details-target="voters">
-          <div class="card-body">
-            <i class="fas fa-user-friends"></i><% @event.attendees.each do |attendee|%>
-              <%# <%= attendee.name %>
-            <%# <% end %>
-          <%# </div>
-        </div> %>
+
       </div>
       <div class="dates" data-event-subscription-target="dates">
         <%= render @event.event_dates %>
