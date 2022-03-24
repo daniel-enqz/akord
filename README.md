@@ -1,10 +1,17 @@
 # AKORD.ME
-### CHECK DEPLOYED <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"> APP HERE
+### CHECK DEPLOYED <img src="https://camo.githubusercontent.com/3bcc8da5c94cefdf2d976837d1be601f4d44d36b58d9590e36debe834a6e34de/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4865726f6b752d3433303039383f7374796c653d666f722d7468652d6261646765266c6f676f3d6865726f6b75266c6f676f436f6c6f723d7768697465"> APP HERE
 
 > *PLACE SOME PROJECT IMAGES HERE (HOME PAGE OR OTHER RELEVANT PAGES)*
+> ![image](https://user-images.githubusercontent.com/71459774/160005281-4f165673-1262-4ebe-8f84-09840b7330c0.png)
+
 
 ## Main APP Features
-- A user can a create an event, and edit the same event.
+- A usear can Sing_in and Log_ing in the app to create a new event and edit
+
+![image](https://user-images.githubusercontent.com/71459774/160005074-400d9022-9085-45bb-bf40-4584bc160d99.png)
+
+![image](https://user-images.githubusercontent.com/71459774/160004990-901a42b1-10bb-46c0-a9a4-e20b9d1e97f8.png)
+
 - A user can't select past dates
 ```ruby
   validate :votable_date_before_today
@@ -22,8 +29,7 @@
     votable_dates.any? { |date| date < ::Date.current }
   end
 ```
-![image](https://user-images.githubusercontent.com/71459774/158896156-2b1c8a7f-20b8-463e-b658-347a29f30e69.png)
-
+![image](https://user-images.githubusercontent.com/71459774/160004122-2b7d312b-205d-4f1e-9600-ef0207de8b1b.png)
 - A user can share the event with a button, the funtion is a combination beteween Ruby code and Js.
 ```ruby
 <% if current_user&.owns?(@event) %>
@@ -51,11 +57,12 @@ export default class extends Controller {
 }
 
 ```
-![image](https://user-images.githubusercontent.com/71459774/159031437-d4d85c2b-dad9-4451-886f-55e5bd3917bb.png)
+![image](https://user-images.githubusercontent.com/71459774/160005495-55bd3fa2-32fe-4ccd-9ed0-0315527b9487.png)
+- Attendees can join in the Join_page, only need to write the username
+![image](https://user-images.githubusercontent.com/71459774/160006498-20e7a29f-158a-41d5-8eeb-485f1417dbbc.png)
+
 - Attendees can vote for different dates for the event in an interactive way (Using Hammer.js for swiping animations)
-![image](https://user-images.githubusercontent.com/72522628/159566185-18e47135-b0bc-4b30-9aac-6770dab94e57.png)
-- Attendees can see LIVE event updates
-```ruby
+![image](https://user-images.githubusercontent.com/71459774/160006947-14b9d064-ba25-4f60-89fe-35fd74de963c.png)```ruby
 <div class="progress-outer">
         <div class="progress">
             <div class="progress-bar progress-bar-info progress-bar-striped active"
@@ -63,7 +70,7 @@ export default class extends Controller {
         </div>
       </div>
 ```
-![image](https://user-images.githubusercontent.com/71459774/159033563-f9e80f61-0033-4c32-ae0b-aba1d8f0fe4e.png)
+![image](https://user-images.githubusercontent.com/71459774/160003834-da5cedae-d38b-45c8-8d71-93db7fb6df17.png)
 
 
 ## APP DB SCHEMA
