@@ -2,9 +2,12 @@
 ### CHECK DEPLOYED <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"> APP HERE
 
 > *PLACE SOME PROJECT IMAGES HERE (HOME PAGE OR OTHER RELEVANT PAGES)*
+> ![image](https://user-images.githubusercontent.com/71459774/160005281-4f165673-1262-4ebe-8f84-09840b7330c0.png)
+
 
 ## Main APP Features
 - A usear can Sing_in and Log_ing in the app to create a new event and edit
+
 ![image](https://user-images.githubusercontent.com/71459774/160005074-400d9022-9085-45bb-bf40-4584bc160d99.png)
 
 ![image](https://user-images.githubusercontent.com/71459774/160004990-901a42b1-10bb-46c0-a9a4-e20b9d1e97f8.png)
