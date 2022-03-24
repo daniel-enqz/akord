@@ -4,7 +4,11 @@
 > *PLACE SOME PROJECT IMAGES HERE (HOME PAGE OR OTHER RELEVANT PAGES)*
 
 ## Main APP Features
-- A user can a create an event, and edit the same event.
+- A usear can Sing_in and Log_ing in the app to create a new event and edit
+![image](https://user-images.githubusercontent.com/71459774/160005074-400d9022-9085-45bb-bf40-4584bc160d99.png)
+
+![image](https://user-images.githubusercontent.com/71459774/160004990-901a42b1-10bb-46c0-a9a4-e20b9d1e97f8.png)
+
 - A user can't select past dates
 ```ruby
   validate :votable_date_before_today
