@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div class="container min-vh-100 d-flex justify-content-center">
+  <div class="container min-vh-100 d-flex justify-content-center mb-3">
     <div class="d-flex flex-column">
       <div class="card w-100  mt-4 blurr-filter">
         <div class="card-body">
@@ -14,9 +14,9 @@
               <%= f.input :description, input_html: { class: "border-radius blurr-filter border-0" } %>
               <%= f.input :votable_dates_strings, label: "Choose possible dates", as: :string, input_html: { data: { controller: "pick-days" } }, wrapper_html: { class: "flatpickr-calendar-custom" } %>
             </div>
-            <div class="form-actions">
-              <%= link_to "Cancel", root_path, class:"btn btn-secondary border-radius text-white fw-bold" %>
-              <%= f.button :submit, class:"btn btn-primary ms-3  border-radius text-white fw-bold" %>
+            <div class="form-actions d-flex justify-content-end">
+              <%= link_to "Cancel", root_path, class:"btn btn-secondary border-radius text-white fw-bold  pt-2" %>
+              <%= f.button :submit, class:"btn btn-primary border-radius text-white fw-bold pt-2 ms-3" %>
             </div>
           <% end %>
         </div>

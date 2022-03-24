@@ -22,7 +22,7 @@
                 <%= event_qr_code(@event).svg %>
               </div>
               <div class="d-flex justify-content-center" data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
-                <button class="btn btn-primary rounded" data-action="click->clipboard#copy"><i class="fas fa-link"></i> Copy</button>
+                <button class="btn btn-secondary rounded" data-action="click->clipboard#copy"><i class="fas fa-link"></i> Copy</button>
                 <input class="blurr-filter border-0 rounded " value="<%= short_join_event_url(@event.funid) %>" data-clipboard-target="input" type="text" readonly>
               </div>
           </div>
@@ -31,7 +31,7 @@
       <div class="d-flex justify-content-between align-items-end mb-2" >  <%# data-controller="show-voting-details" %>
         <h2 class="text-info mt-2 mb-0">Results</strong></h2>
         <button class="d-inline-flex align-items-center btn btn-light badge"  data-bs-toggle="tooltip" data-bs-placement="top" title="<%= @event.attendees.pluck(:name).to_sentence %>">  <%# data-action="click->show-voting-details#displayVoters" %>
-          <span><i class="fas text-primary fa-users"></i></span>&nbsp;<span class="badge bg-primary total-display" data-event-subscription-target="totalDisplay"><%= @event.attendees.count %></span>
+          <span><i class="fas text-secondary fa-users"></i></span>&nbsp;<span class="badge btn-secondary total-display" data-event-subscription-target="totalDisplay"><%= @event.attendees.count %></span>
         </button>
         <%# <div class="card d-none mt-2" data-show-voting-details-target="voters">
           <div class="card-body">

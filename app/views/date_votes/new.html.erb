@@ -1,24 +1,25 @@
 <div class="wrapper">
   <div class="overflow-hidden">
-    <div class="container-sm">
-      <div class="d-flex flex-column m-5">
-        <div class="card blurr-filter p-3">
-          <h4  class="fw-bold text-primary text-white">Hey <%= current_attendee.name.capitalize %>! you are invited to <%= @date_votes.event.title %> </h4>
-          <p><%= @date_votes.event.description %></p>
-          <h5 class="text-white">We are trying to <strong class="fw-bold text-danger">Akord</strong> on a date for <%= @date_votes.event.title %></h5>
-          <%# <h5 class="border-bottom fw-bold text-primary">Your vote helps!</h5> %>
-        </div>
+    <div class="container pt-5">
+      <div class="card blurr-filter p-3 ">
+        <h4  class="fw-bold text-primary text-white">Hey <%= current_attendee.name.capitalize %>! you are invited to <%= @date_votes.event.title %> </h4>
+        <p><%= @date_votes.event.description %></p>
+        <h5 class="text-white">We are trying to <b>Akord</b> on a date for <%= @date_votes.event.title %></h5>
+        <%# <h5 class="border-bottom fw-bold text-primary">Your vote helps!</h5> %>
+      </div>
+      <div class="d-flex flex-column m-5 mt-2">
         <%= simple_form_for @date_votes, url: event_date_votes_path do |f| %>
           <% first = true %>
           <%= f.simple_fields_for :votes do |fv| %>
             <%= fv.input :date, as: :hidden %>
             <div style="width: calc(100% - 10px)" class="<%= first ? 'jiggle' : '' %> voting-card effect-3d box-shadow m-auto position-relative swipe-maybe p-3 mb-3"  data-controller="swipe-radio">
               <% first = false %>
-              <div class="d-flex align-items-center">
-                <div class="context-clue">
+                <div class="context-clue d-flex align-items-start">
                   <%= icon "fa", "caret-left" %>
+                  <i class="far fa-hand-paper <%= first ? 'jiggle' : '' %>"></i>
                   <%= icon "fa", "caret-right" %>
                 </div>
+              <div class="d-flex align-items-center">
                 <%= fv.input :rate, as: :hidden, input_html: { data: { swipe_radio_target: :input } } %>
                 <div class="p-2 align-items-center d-flex justify-content-between">
                   <p class="day_date mb-0"><strong><%= fv.object.event_date.day %></strong></p>
