@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "e", to: "events#join", as: :pin_join_event # GET e?
   get "join", to: "pages#join"
 
-  resources :events, only: %i[new index create show] do
+  resources :events, only: %i[new create show] do
     resource :chosen_date, only: %i[show]
     get "/chosen_date/create", to: "chosen_dates#create", as: :chosen_date_create
 
