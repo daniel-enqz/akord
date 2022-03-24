@@ -57,7 +57,7 @@ export default class extends Controller {
 }
 
 ```
-![image](https://user-images.githubusercontent.com/71459774/159031437-d4d85c2b-dad9-4451-886f-55e5bd3917bb.png)
+![image](https://user-images.githubusercontent.com/71459774/160005495-55bd3fa2-32fe-4ccd-9ed0-0315527b9487.png)
 - Attendees can vote for different dates for the event in an interactive way (Using Hammer.js for swiping animations)
 ![image](https://user-images.githubusercontent.com/72522628/159566185-18e47135-b0bc-4b30-9aac-6770dab94e57.png)
 - Attendees can see LIVE event updates
