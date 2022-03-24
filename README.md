@@ -58,9 +58,11 @@ export default class extends Controller {
 
 ```
 ![image](https://user-images.githubusercontent.com/71459774/160005495-55bd3fa2-32fe-4ccd-9ed0-0315527b9487.png)
+- Attendees can join in the Join_page, only need to write the username
+![image](https://user-images.githubusercontent.com/71459774/160006498-20e7a29f-158a-41d5-8eeb-485f1417dbbc.png)
+
 - Attendees can vote for different dates for the event in an interactive way (Using Hammer.js for swiping animations)
-![image](https://user-images.githubusercontent.com/72522628/159566185-18e47135-b0bc-4b30-9aac-6770dab94e57.png)
-- Attendees can see LIVE event updates
+![image](https://user-images.githubusercontent.com/71459774/160006608-220132d7-0cae-49d5-8cb1-2bcc9f9bf73f.png)- Attendees can see LIVE event updates
 ```ruby
 <div class="progress-outer">
         <div class="progress">
