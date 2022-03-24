@@ -20,12 +20,20 @@ class Event::Date
     value.strftime("%a, %b %d")
   end
 
+  def year
+    value.strftime("%Y")
+  end
+
   def week_day
     value.strftime("%a")
   end
 
   def month
     value.strftime("%b")
+  end
+
+  def month_number
+    value.strftime("%-m")
   end
 
   def day
