@@ -19,6 +19,14 @@ class Event < ApplicationRecord
     votes.group(:date).sum(:rate)
   end
 
+  def closed?
+    chosen_date.present?
+  end
+
+  def chosen_date
+    Event::Date.new(super.to_s, self)
+  end
+
   # Might help with flatpick values if they are JSON
   # "2020-10-10, 2020-10-11" => ["2020-10-10", "2020-10-11"]
   def votable_dates_strings=(value)

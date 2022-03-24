@@ -7,6 +7,10 @@ class Event::Date
     @event = event
   end
 
+  def chosen?
+    event.chosen_date == value
+  end
+
   # Example of things the view might need
   def short_string
     value.strftime("%a, %b %d")

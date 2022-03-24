@@ -15,7 +15,17 @@ ActiveStorage.start()
 import "controllers"
 import * as bootstrap from "bootstrap"
 
+import { initSweetalert } from '../plugins/init_sweetalert';
+
+initSweetalert('#sweet-alert-demo', {
+  title: "A nice alert",
+  text: "hey",
+  icon: "success"
+});
+
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
+
+// You are choosing #{event_date.week_day}, #{event_date.month} #{event_date.day} as the winner date... Correct?

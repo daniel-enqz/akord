@@ -1,9 +1,13 @@
+<% if event_date.chosen? %>
+  <%# render modal page %>
+<% end %>
+<%= link_to "Chose", event_chosen_date_path(event_date.event, date_string: event_date.value), id: "sweet-alert-demo", method: :post %>
 <div data-date=<%= event_date.value %> class="mb-2">
-  <div class="d-flex blurr-filter px-3">
+  <div class="d-flex blurr-filter px-3 <%= event_date.chosen? ? "border border-3 border-primary" : "" %>">
     <div class="pe-3 align-items-center d-flex justify-content-between ">
-      <p class="day_date mb-0"><strong><%= event_date.day %></strong></p>
+      <p class="day_date mb-0 <%= event_date.chosen? ? "text-primary" : "" %>"><strong><%= event_date.day %></strong></p>
       <div class="ms-1">
-        <h5 class="mb-0"><%= event_date.month %></h5>
+        <h5 class="mb-0 <%= event_date.chosen? ? "text-primary" : "" %>"><%= event_date.month %></h5>
         <p class="mb-0 small text-muted"><%= event_date.week_day %></p>
       </div>
     </div>
