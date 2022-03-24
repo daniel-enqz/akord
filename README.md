@@ -1,5 +1,5 @@
 # AKORD.ME
-### CHECK DEPLOYED <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"> APP HERE
+### CHECK DEPLOYED <img src="https://akord-app.herokuapp.com/"> APP HERE
 
 > *PLACE SOME PROJECT IMAGES HERE (HOME PAGE OR OTHER RELEVANT PAGES)*
 > ![image](https://user-images.githubusercontent.com/71459774/160005281-4f165673-1262-4ebe-8f84-09840b7330c0.png)
