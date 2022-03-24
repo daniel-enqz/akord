@@ -1,4 +1,7 @@
 # AKORD.ME
+<a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/71459774/160011831-cadb6eac-4eb8-4265-b981-a7c00a7fb6a5.png"></a>
+
+
 ### CHECK DEPLOYED APP HERE  <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://camo.githubusercontent.com/3bcc8da5c94cefdf2d976837d1be601f4d44d36b58d9590e36debe834a6e34de/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4865726f6b752d3433303039383f7374796c653d666f722d7468652d6261646765266c6f676f3d6865726f6b75266c6f676f436f6c6f723d7768697465"></a>
 
 > *PLACE SOME PROJECT IMAGES HERE (HOME PAGE OR OTHER RELEVANT PAGES)*
