@@ -79,4 +79,26 @@ class Event::Date
   def to_partial_path
     "event_date"
   end
+
+  def outlook_url
+    calendar_url_builder.outlook_com_url
+  end
+
+  def google_url
+    calendar_url_builder.google_url
+  end
+
+  private
+
+  def calendar_url_builder
+    @calendar_url_builder ||= AddToCalendar::URLs.new(
+      start_datetime: Time.new(year, month_number, day),
+      end_datetime: Time.new(year, month_number, day, 23, 59, 59, 0), # required
+      title: event.title, # required
+      timezone: 'America/Mexico_City', # required
+      url: "https://www.akord.me/events/#{event.hashid}",
+      description: "Host: #{event.user.attendee.name}🥳\n#{event.description}",
+      add_url_to_description: true # defaults to true
+    )
+  end
 end
