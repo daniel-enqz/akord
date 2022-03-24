@@ -7,6 +7,14 @@ class Event::Date
     @event = event
   end
 
+  def ==(other)
+    (value == other.value) && (event == other.event)
+  end
+
+  def chosen?
+    event.chosen_date == self
+  end
+
   # Example of things the view might need
   def short_string
     value.strftime("%a, %b %d")

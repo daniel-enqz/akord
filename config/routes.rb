@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get "join", to: "pages#join"
 
   resources :events, only: %i[new create index show] do
+    resource :chosen_date, only: %i[show]
+    get "/chosen_date/create", to: "chosen_dates#create", as: :chosen_date_create
+
     resources :attendees, only: [:create]
     get "join", on: :member
 

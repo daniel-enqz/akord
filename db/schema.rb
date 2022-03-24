@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_18_205401) do
+ActiveRecord::Schema.define(version: 2022_03_23_174234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2022_03_18_205401) do
     t.datetime "updated_at", precision: 6, null: false
     t.jsonb "votable_dates_strings", default: [], null: false
     t.string "funid", null: false
+    t.date "chosen_date"
     t.index ["funid"], name: "index_events_on_funid", unique: true
     t.index ["user_id"], name: "index_events_on_user_id"
   end
