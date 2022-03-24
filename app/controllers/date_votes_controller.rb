@@ -18,7 +18,7 @@ class DateVotesController < ApplicationController
         @event,
         @date_votes.votes.as_json(only: [:date, :rate])
       )
-      redirect_to event_path(@event.hashid), notice: 'Your vote is in, Thanks!.'
+      redirect_to event_path(@event.hashid), notice: 'Your vote is in, Thanks!'
     else
       render :new
     end
