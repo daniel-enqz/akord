@@ -1,0 +1,22 @@
+<div class= "col-sm-6">
+  <%# <%= image_tag "akord.png", height: 200, class: "img-fluid" %>
+  <div class="justify-content-center">
+    <div class="card py-2 px-1 blurr-filter m-1 text-center">
+      <h3 class="fw-bold">All votes are in!</h3>
+      <p class=" mb-1"><strong><%= @event.title.capitalize %></strong> will be on:</p>
+      <div class= "mb-1">
+        <div class="d-inline-flex flex-column m-1 rounded overflow-hidden">
+          <div class="px-4 py-1 h3  text-info bg-secondary mb-0 "><%= @event.chosen_date.month%></div>
+          <div class="px-4 py-1 bg-info chosen-day mb-0 fw-bold"><%=@event.chosen_date.day%></div>
+          <div class=" bg-dark text-info mb-0"><%=@event.chosen_date.week_day%></div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-evenly mt-3">
+      <a class="btn p-2 badge btn-secondary border-radius border-0 blurr-filter" href="<%= @event.chosen_date.google_url %>"><strong>Google Calendar</strong>
+      <span><%= image_tag "google.png", height: 20, width: 20, class: "img-fluid" %></span></a>
+      <a class="btn p-2 badge btn-secondary border-radius border-0 blurr-filter" href="<%= @event.chosen_date.outlook_url %>"><strong>Outlook Calendar</strong>
+      <span><%= image_tag "outlook.png", height: 20, width: 20, class: "img-fluid" %></span></a>
+    </div>
+  </div>
+</div>
