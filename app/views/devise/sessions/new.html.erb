@@ -15,11 +15,13 @@
                         input_html: { autocomplete: "current-password" } %>
             <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
-          <div class="form-actions btn w-100 mb-2 wrapper rounded-3">
-            <%= f.button :submit, "Log in", class:"text-white " %>
+          <div class="form-actions">
+            <%= f.button :submit, "Log in", class:"text-white fw-bold btn w-100 mb-2 wrapper rounded-pill" %>
           </div>
         <% end %>
-      <%= render "devise/shared/links" %>
+      <div class="d-flex justify-content-between mt-2 ">
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
     </div>
     </div>
