@@ -12,13 +12,13 @@ export default class extends Controller {
     event.preventDefault()
     Swal.fire({
       title:             'Are you sure?',
-      text:              '',
+      text:              'You have selected the winner date for this event',
       icon:              'warning',
       showCancelButton:  true,
       confirmButtonText: 'Yes',
       cancelButtonText:  'Cancel',
-    }).then(() => {
-      window.location = this.element.href
+    }).then((result) => {
+      if(result.isConfirmed) window.location = this.element.href
     });
   }
 }

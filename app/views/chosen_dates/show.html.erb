@@ -1,16 +1,21 @@
-<div class="wrapper">
-  <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center">
+<div class="wrapper position-relative">
+  <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center ">
+    <div class="p-3 m-2 h1 position-absolute top-0 start-0">
+      <%= link_to event_path(@event) do %>
+        <i class="fas fa-arrow-left"></i>
+      <% end %>
+    </div>
     <div class= "col-sm-6 ">
       <%= image_tag "akord.png", height: 200, class: "img-fluid" %>
       <div class="justify-content-center">
-        <div class="card form-login blurr-filter m-1 text-center">
+        <div class="card py-2 px-1 blurr-filter m-1 text-center">
           <h3 class="fw-bold">All votes are in!</h3>
           <p class=" mb-1"><strong><%= @event.title.capitalize %></strong> will be on:</p>
-          <div>
+          <div class= "mb-1">
             <div class="d-inline-flex flex-column m-1 rounded overflow-hidden">
               <div class="px-4 py-1 h3  text-info bg-primary mb-0 "><%= @event.chosen_date.month%></div>
               <div class="px-4 py-1 bg-info chosen-day mb-0 fw-bold"><%=@event.chosen_date.day%></div>
-              <div class=" bg-secondary text-info mb-0"><%=@event.chosen_date.week_day%></div>
+              <div class="bg-secondary text-info mb-0"><%=@event.chosen_date.week_day%></div>
             </div>
           </div>
         </div>
