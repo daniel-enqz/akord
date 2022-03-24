@@ -16,8 +16,8 @@
       </div>
       <% if @event.closed? %>
         <div class="d-flex flex-column align-items-center">
-         <%= link_to "view winner date", event_chosen_date_path(@event), class: "btn btn-primary fw-bold" %>
-          <%# <%= render "chosen_dates/modal" %>
+         <%# <%= link_to "view winner date", event_chosen_date_path(@event.chosen_date, date_string: @event.chosen_date.value), class: "btn btn-primary fw-bold" %>
+          <%= render "chosen_dates/modal" %>
         </div>
       <% else %>
         <%= render "invitation_links" %>
