@@ -25,7 +25,7 @@ CHECK DEPLOYED APP HERE  <a  target="_blank" href="https://akord-app.herokuapp.c
 <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/72522628/160189762-0a65b86b-d7cb-4f44-8f52-cf4b1fcc4eaf.png"></a>
 </p>
 
-- A user can't select past dates
+- A user can't select past dates when creating an event
 ```ruby
   validate :votable_date_before_today
   def votable_dates
