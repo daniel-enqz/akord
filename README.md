@@ -6,7 +6,7 @@ You don't find the way to agree with your friends for your events or to go out. 
 </p>
 
 <p align="center">
-### CHECK DEPLOYED APP HERE  <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://camo.githubusercontent.com/3bcc8da5c94cefdf2d976837d1be601f4d44d36b58d9590e36debe834a6e34de/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4865726f6b752d3433303039383f7374796c653d666f722d7468652d6261646765266c6f676f3d6865726f6b75266c6f676f436f6c6f723d7768697465"></a>
+CHECK DEPLOYED APP HERE  <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://camo.githubusercontent.com/3bcc8da5c94cefdf2d976837d1be601f4d44d36b58d9590e36debe834a6e34de/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4865726f6b752d3433303039383f7374796c653d666f722d7468652d6261646765266c6f676f3d6865726f6b75266c6f676f436f6c6f723d7768697465"></a>
 
 ![image](https://user-images.githubusercontent.com/72522628/160181073-66255ceb-f8d2-4994-9cf8-a0f0c9884357.png)
 </p>
