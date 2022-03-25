@@ -43,7 +43,11 @@ CHECK DEPLOYED APP HERE  <a  target="_blank" href="https://akord-app.herokuapp.c
   end
 ```
 ![image](https://user-images.githubusercontent.com/71459774/160004122-2b7d312b-205d-4f1e-9600-ef0207de8b1b.png)
-- A user can share the event with a button, the funtion is a combination beteween Ruby code and Js.
+- A user can share the event
+<p align="center">
+<a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/72522628/160190469-14e5d0ed-e66a-4954-9ca0-8a73cfdbde30.png"></a>
+</p>
+
 ```ruby
 <% if current_user&.owns?(@event) %>
       <div data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
