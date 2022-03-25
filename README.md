@@ -80,14 +80,8 @@ export default class extends Controller {
 </p>
 
 - Attendees can vote for different dates for the event in an interactive way (Using Hammer.js for swiping animations)
-![image](https://user-images.githubusercontent.com/71459774/160006947-14b9d064-ba25-4f60-89fe-35fd74de963c.png)```ruby
-<div class="progress-outer">
-        <div class="progress">
-            <div class="progress-bar progress-bar-info progress-bar-striped active"
-            style="width: <%= event_date.progress_bar_value %>%; box-shadow:-1px 10px 10px rgba(91, 192, 222, 0.7);"></div>
-        </div>
-      </div>
-```
+![image](https://user-images.githubusercontent.com/71459774/160006947-14b9d064-ba25-4f60-89fe-35fd74de963c.png)
+
 ![image](https://user-images.githubusercontent.com/71459774/160003834-da5cedae-d38b-45c8-8d71-93db7fb6df17.png)
 
 
