@@ -10,7 +10,7 @@ CHECK DEPLOYED APP HERE  <a  target="_blank" href="https://akord-app.herokuapp.c
 </p>
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/72522628/160181073-66255ceb-f8d2-4994-9cf8-a0f0c9884357.png)
+<a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/72522628/160181073-66255ceb-f8d2-4994-9cf8-a0f0c9884357.png"></a>
 </p>
 
 ## Main APP Features
