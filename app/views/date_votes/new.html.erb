@@ -12,7 +12,7 @@
           <% first = true %>
           <%= f.simple_fields_for :votes do |fv| %>
             <%= fv.input :date, as: :hidden %>
-            <div style="width: calc(100% - 10px)" class="<%= first ? 'jiggle' : '' %> voting-card effect-3d box-shadow m-auto position-relative swipe-maybe p-3 mb-3"  data-controller="swipe-radio">
+            <div style="width: calc(100% - 10px)" class="<%= first ? 'jiggle' : '' %> voting-card box-shadow m-auto position-relative swipe-maybe p-3 mb-3"  data-controller="swipe-radio">
                 <div class="context-clue d-flex align-items-start">
                   <% if first %>
                     <p><strong>Swipe Me!<strong></p>
