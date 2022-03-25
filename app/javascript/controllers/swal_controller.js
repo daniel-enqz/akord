@@ -12,7 +12,7 @@ export default class extends Controller {
     event.preventDefault()
     Swal.fire({
       title:             'Are you sure?',
-      text:              'You will select the winner date for this event',
+      text:              'You are selecting the winner date for this event',
       icon:              'warning',
       showCancelButton:  true,
       confirmButtonText: 'Yes',
