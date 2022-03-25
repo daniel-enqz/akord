@@ -74,9 +74,10 @@ export default class extends Controller {
 }
 
 ```
-![image](https://user-images.githubusercontent.com/71459774/160005495-55bd3fa2-32fe-4ccd-9ed0-0315527b9487.png)
-- Attendees can join in the Join_page, only need to write the username
-![image](https://user-images.githubusercontent.com/71459774/160006498-20e7a29f-158a-41d5-8eeb-485f1417dbbc.png)
+- Attendees can join and VOTE for an event!
+<p align="center">
+<a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/71459774/160006498-20e7a29f-158a-41d5-8eeb-485f1417dbbc.png"></a>
+</p>
 
 - Attendees can vote for different dates for the event in an interactive way (Using Hammer.js for swiping animations)
 ![image](https://user-images.githubusercontent.com/71459774/160006947-14b9d064-ba25-4f60-89fe-35fd74de963c.png)```ruby
