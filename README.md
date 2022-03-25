@@ -82,9 +82,10 @@ export default class extends Controller {
 - Attendees can vote for different dates for the event in an interactive way (Using Hammer.js for swiping animations)
 ![image](https://user-images.githubusercontent.com/71459774/160006947-14b9d064-ba25-4f60-89fe-35fd74de963c.png)
 
-- Attendess can see a the Live Voting for the selected DATES!
-![image](https://user-images.githubusercontent.com/72522628/160191709-434d849c-2fce-43a2-9544-34738623435d.png)
-
+- Attendess can see a the "Live Voting" for the selected DATES!
+<p align="center">
+<a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/72522628/160191709-434d849c-2fce-43a2-9544-34738623435d.png"></a>
+</p>
 
 ## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
