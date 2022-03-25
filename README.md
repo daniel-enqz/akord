@@ -1,11 +1,12 @@
 # Simply get together
 You don't find the way to agree with your friends for your events or to go out. We have the solution, in Akord you can create an event to go anywhere, you only need sign in and create an event for you and your friends, even your family. Choosing the date for a special ocassion is now easier with the help of Akord.
 
+
+### CHECK DEPLOYED <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"> APP [HERE](https://akord-app.herokuapp.com/)
+
 <p align="center">
 <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/71459774/160011831-cadb6eac-4eb8-4265-b981-a7c00a7fb6a5.png"></a>
 </p>
-
-### CHECK DEPLOYED <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"> APP [HERE](https://akord-app.herokuapp.com/)
 
 <p align="center">
 <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/72522628/160181073-66255ceb-f8d2-4994-9cf8-a0f0c9884357.png"></a>
