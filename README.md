@@ -22,7 +22,7 @@ CHECK DEPLOYED APP HERE  <a  target="_blank" href="https://akord-app.herokuapp.c
 
 - A user can create an Event!
 <p align="center">
-<a  target="_blank" href="https://user-images.githubusercontent.com/72522628/160189762-0a65b86b-d7cb-4f44-8f52-cf4b1fcc4eaf.png"></a>
+<a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/72522628/160189762-0a65b86b-d7cb-4f44-8f52-cf4b1fcc4eaf.png"></a>
 </p>
 
 - A user can't select past dates
