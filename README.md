@@ -87,6 +87,14 @@ export default class extends Controller {
 <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/72522628/160191709-434d849c-2fce-43a2-9544-34738623435d.png"></a>
 </p>
 
+- The event creator can select a winning date based on results, so that everyone can see it on their phones and even add it to their preffered calendar!
+<p align="center">
+<a  target="_blank" href="https://user-images.githubusercontent.com/72522628/160192203-1923108b-20d1-4c5f-8fbd-469380bf76de.png"></a>
+</p>
+<p align="center">
+<a  target="_blank" href="https://user-images.githubusercontent.com/72522628/160192238-13fed36d-059b-4cd4-a325-f53d61bcd276.png"></a>
+</p>
+
 ## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
 
