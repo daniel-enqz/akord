@@ -82,7 +82,8 @@ export default class extends Controller {
 - Attendees can vote for different dates for the event in an interactive way (Using Hammer.js for swiping animations)
 ![image](https://user-images.githubusercontent.com/71459774/160006947-14b9d064-ba25-4f60-89fe-35fd74de963c.png)
 
-![image](https://user-images.githubusercontent.com/71459774/160003834-da5cedae-d38b-45c8-8d71-93db7fb6df17.png)
+- Attendess can see a the Live Voting for the selected DATES!
+![image](https://user-images.githubusercontent.com/72522628/160191709-434d849c-2fce-43a2-9544-34738623435d.png)
 
 
 ## APP DB SCHEMA
