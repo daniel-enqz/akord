@@ -18,7 +18,7 @@ class VotesJob < ApplicationJob
           attendee: attendee
         )
       end
-      EventChannel.broadcast_to(
+      VotesChannel.broadcast_to(
         event,
         votes.as_json(only: [:date, :rate])
       )

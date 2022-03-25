@@ -7,7 +7,7 @@ export default class extends Controller {
 
   connect() {
     this.channel = consumer.subscriptions.create(
-      { channel: "EventChannel", id: this.eventIdValue },
+      { channel: "VotesChannel", id: this.eventIdValue },
       {
         received: data => this.#insertDatesVotes(data)
       }
