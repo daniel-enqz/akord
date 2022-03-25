@@ -6,7 +6,7 @@
           <h2 class="text-center fw-bold">Sign up</h2>
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= f.error_notification %>
-            <% binding.pry if resource.errors.any? %>
+            <% if resource.errors.any? %>
             <div class="form-inputs">
               <%= f.input :email,
                           required: true,
