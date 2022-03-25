@@ -1,4 +1,4 @@
-<% if current_user&.owns?(@event) && @event.closed? == true %>
+<% if current_user&.owns?(@event) && @event.closed? == false %>
   <%= link_to "Choose this date", event_chosen_date_create_path(event_date.event, date_string: event_date.value), data: { controller: "swal", action: "swal#alert" }, class: "text-secondary" %>
 <% end %>
 <div data-date=<%= event_date.value %> class="mb-2">
