@@ -7,5 +7,8 @@
         <button class="btn btn-secondary rounded" data-action="click->clipboard#copy"><i class="fas fa-link"></i> Copy</button>
         <input class="blurr-filter border-0 rounded " value="<%= short_join_event_url(@event.funid) %>" data-clipboard-target="input" type="text" readonly>
       </div>
+      <% if current_user %>
+        <%= link_to 'vote', new_event_date_vote_path(@event), class: "text-white" %>
+      <% end %>
   </div>
 </div>
