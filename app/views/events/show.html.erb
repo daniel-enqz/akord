@@ -22,7 +22,7 @@
         <%end%>
       </div>
       <div class="d-flex justify-content-between align-items-end mb-2" >
-        <h2 class="text-info mt-2 mb-0">Results</strong></h2>
+        <h2 class="text-info mt-2 mb-0"><strong>Results</strong></h2>
         <button class="d-inline-flex align-items-center btn btn-light badge"  data-bs-toggle="tooltip" data-bs-placement="top" title="<%= @event.attendees.pluck(:name).to_sentence %>">
           <span><i class="fas text-secondary fa-users"></i></span>&nbsp;<span class="badge btn-secondary total-display" data-votes-subscription-target="totalDisplay"><%= @event.attendees.count %></span>
         </button>
