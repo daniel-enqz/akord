@@ -98,7 +98,7 @@ export default class extends Controller {
 Please feel free to check the APP and experiment yourself!!!👻
 </h1>
 
-> [AKORD.ME | https://akord-app.herokuapp.com/](https://akord-app.herokuapp.com/)
+> [AKORD.ME🗓️ https://www.akord.me/](https://akord-app.herokuapp.com/)
 
 ## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
