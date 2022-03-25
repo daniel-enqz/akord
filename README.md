@@ -20,6 +20,11 @@ CHECK DEPLOYED APP HERE  <a  target="_blank" href="https://akord-app.herokuapp.c
 
 <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/71459774/160004990-901a42b1-10bb-46c0-a9a4-e20b9d1e97f8.png"></a>
 
+<p align="center">
+- A user can create an Event!
+<a  target="_blank" href="https://user-images.githubusercontent.com/72522628/160189762-0a65b86b-d7cb-4f44-8f52-cf4b1fcc4eaf.png"></a>
+</p>
+
 - A user can't select past dates
 ```ruby
   validate :votable_date_before_today
