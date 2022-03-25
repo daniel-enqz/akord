@@ -14,7 +14,7 @@ CHECK DEPLOYED APP HERE  <a  target="_blank" href="https://akord-app.herokuapp.c
 </p>
 
 ## Main APP Features
-- A usear can Sing_in and Log_ing in the app to create a new event and edit
+- A usear can Sing up and Log in the app to create a new event.
 
 <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/71459774/160005074-400d9022-9085-45bb-bf40-4584bc160d99.png"></a>
 
