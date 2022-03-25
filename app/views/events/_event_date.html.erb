@@ -1,5 +1,5 @@
 <% if current_user&.owns?(@event) && @event.closed? == false %>
-  <%= link_to "Choose this date", event_chosen_date_create_path(event_date.event, date_string: event_date.value), data: { controller: "swal", action: "swal#alert" }, class: "text-secondary" %>
+  <%= link_to "Choose this date", event_chosen_date_create_path(event_date.event, date_string: event_date.value), data: { controller: "swal", swal_short_string_value: event_date.short_string, action: "swal#alert" }, class: "text-secondary" %>
 <% end %>
 <div data-date=<%= event_date.value %> class="mb-2">
   <div class="d-flex blurr-filter px-3 <%= event_date.chosen? ? "border border-3 border-secondary" : "" %>">

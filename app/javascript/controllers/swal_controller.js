@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  // static targets = [ "output" ]
+  static values = { shortString: String }
 
   connect() {
   }
@@ -11,7 +11,7 @@ export default class extends Controller {
     event.preventDefault()
     Swal.fire({
       title:             'Are you sure?',
-      text:              'You are selecting the winner date for this event',
+      text:              `${this.shortStringValue} will be the winner date for this event.`,
       icon:              'warning',
       showCancelButton:  true,
       confirmButtonText: 'Yes',

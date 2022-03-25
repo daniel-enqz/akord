@@ -22,5 +22,3 @@ document.addEventListener("turbolinks:load", () => {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
 })
-
-// You are choosing #{event_date.week_day}, #{event_date.month} #{event_date.day} as the winner date... Correct?

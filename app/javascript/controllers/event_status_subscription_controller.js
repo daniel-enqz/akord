@@ -19,7 +19,7 @@ export default class extends Controller {
     this.infoTarget.innerHTML = data.info
     this.datesTarget.innerHTML = data.dates
     Swal.fire({
-      title:             'Congratulations',
+      title:             'Save the date!',
       html:              data.alertWindow
     })
   }
