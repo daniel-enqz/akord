@@ -98,9 +98,9 @@ export default class extends Controller {
 <a  target="_blank" href="https://akord-app.herokuapp.com/"><img src="https://user-images.githubusercontent.com/72522628/160192238-13fed36d-059b-4cd4-a325-f53d61bcd276.png"></a>
 </p>
 
-<p align="center">
-<h2>Please feel free to check the APP and experiment yourself!!!👻</h2>
-</p>
+<h2 align="center">
+Please feel free to check the APP and experiment yourself!!!👻
+</h2>
 
 ## APP DB SCHEMA
 ![image](https://user-images.githubusercontent.com/72522628/158682746-1f6e0c6d-0b9d-4e76-bf93-7a9aadbad80f.png)
