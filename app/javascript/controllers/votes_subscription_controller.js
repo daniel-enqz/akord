@@ -12,7 +12,7 @@ export default class extends Controller {
         received: data => this.#insertDatesVotes(data)
       }
     )
-    console.log(`Subscribed to the chatroom with the id ${this.eventIdValue}.`)
+    console.log(`Subscribed to the event with the id ${this.eventIdValue}.`)
   }
 
   #insertDatesVotes(data) {
